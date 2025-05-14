@@ -18,7 +18,7 @@ import pandas as pd
 sys.path.append(str(pathlib.Path(__file__).resolve().parent.parent))
 
 # Import local modules (e.g. utils/logger.py)
-from utils import logger
+from utils.logger import logger
 
 # Constants
 SCRIPTS_DIR: pathlib.Path = pathlib.Path(__file__).resolve().parent  # Directory of the current script
