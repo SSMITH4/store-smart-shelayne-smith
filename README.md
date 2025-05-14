@@ -14,4 +14,6 @@
    1. Source Control Panel
       1. click on ... select push
       2. OR open a terminal and run: git push origin main
-7. 
+7. git add any new files to source control (so the new files will be tracked)
+8. git commit the set of changes to the git project repository with a message telling what we did
+9. git push that named set of changes (called a commit) up to GitHub for safe keeping.
