@@ -21,3 +21,9 @@
 8. git add any new files to source control (so the new files will be tracked)
 9.  git commit the set of changes to the git project repository with a message telling what we did
 10. git push that named set of changes (called a commit) up to GitHub for safe keeping.
+11. Three commands to utilize after each small change
+    1.  git add .
+    2.  git commit -m "Update README.md with command"
+    3.  git push
+12. NOTE: Double check file names
+    1.  Ran into an issue with python script because there was a space in logger.py which made it so the system couldn't find the pathway to run the scripts
