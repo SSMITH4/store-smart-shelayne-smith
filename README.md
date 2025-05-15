@@ -1,29 +1,48 @@
 # store-smart-shelayne-smith
 
-1. Change pathway from Repo Folder to store-smart-shelayne-smith
-   1. File - Open Folder - Navigate to store-smart-shelayne-smith within File Explorer and select
-2. Use cd - enter file you want to be in to sync in terminal for correct folder pathway
-3. ChatGPT - helpful tool to understanding processes & visualizing steps required.  Provides additional commands for troubleshooting
-4. Markdown cells turn your input into clean, readable text like you'd see in a report.  It's helpful for adding notes, explanations, or even formatting your notebook like a guide.
-5. TO Commit Changes
-   1. Go to Source Control
-   2. Click the + icon next to the files you want to commit
-   3. Commit
-      1. Type a message in the message box : ex. add updates to README.md
-6. Push to GitHub
-   1. Source Control Panel
-      1. click on ... select push
-      2. OR open a terminal and run: git push origin main
-7. Pull from GitHub
-   1. Source Control Panel 
-      1. click on ... select pull
-      2. OR open a terminal and run :git pull origin main
-8. git add any new files to source control (so the new files will be tracked)
-9.  git commit the set of changes to the git project repository with a message telling what we did
-10. git push that named set of changes (called a commit) up to GitHub for safe keeping.
-11. Three commands to utilize after each small change
-    1.  git add .
-    2.  git commit -m "Update README.md with command"
-    3.  git push
-12. NOTE: Double check file names
+1. UNDERSTANDING & SET-UP FOLDERS/FILES
+   *  .gitignore: File lists content that doesn't need to be tracked in the project history
+   * requirements.txt lists all the packages the project needs
+     * Lines starting with a hash are ignored when installing packages using this file
+     * You can comment them in all environment in Python - it's a self contained environment that includes its own Python interpreter,   pip, and libraries. Helps manage dependencies per project, so they don't interfere with other projects or system-wide Python.
+   * 
+2. COMMANDS
+   * Change pathway from Repo Folder to store-smart-shelayne-smith
+     1. File - Open Folder - Navigate to store-smart-shelayne-smith within File Explorer and select
+   * Use cd - enter file you want to be in to sync in terminal for correct folder pathway
+   * To Commit Changes
+      *  Go to Source Control
+      * Click the + icon next to the files you want to commit
+      * Commit
+      * Type a message in the message box : ex. add updates to README.mD
+   * Push/Pull to GitHub
+   * Three commands to utilize after each small change
+    1.  git add . -Any new files to source control (so the new files will be tracked)
+    2.  git commit -m "Update README.md with command"-set of changes to the git project repository with a message telling what you did.
+    3.  git push -that named set of changes (called a commit) up to GitHub for safe keeping.
+      * Source Control Panel
+      * click on ... select push
+      * OR open a* terminal and run: git push origin main
+   * git pull -pull information into local from GitHub
+     * Source Control Panel 
+     * click on ... select pull
+     * OR open a terminal and run :git pull origin main
+   * Activate .venv - .venv\Scripts\activate
+   * External Dependencies - Libraries, packages,and modules beyond the standard library & include common packages (ex. pandas).  These must be istalled in our local project vitual environment to use the in our code.
+     * Activate .venv
+     * Update key packages
+     * Install dependencies from the requirements.txt file
+     * run commands
+       * .\.venv\Scripts\activate
+       * py -m pip install --upgrade pip setuptools wheel
+       * py -m pip install -r requirements.txt
+   
+3.  NOTES
+   *  All information is for Windows users only
+    * Markdown cells turn your input into clean, readable text like you'd see in a report.  It's helpful for adding notes, explanations, or even formatting your notebook like a guide. 
+    * NOTE: Double check file names
     1.  Ran into an issue with python script because there was a space in logger.py which made it so the system couldn't find the pathway to run the scripts
+   
+
+4.  USEFUL TOOLS
+   1. ChatGPT - helpful tool to understanding processes & visualizing steps required.  Provides additional commands for troubleshooting
