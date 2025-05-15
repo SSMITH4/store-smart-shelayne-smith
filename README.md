@@ -8,7 +8,8 @@
    * demo_notebook.ipynb: demonstrates how your project works using an interactive, easy-to-follow format (typically in Jupyter Notebook)
    * demo_script.py: A very simple Python script to demonstrate basic features
    * utils_logger.py: This script provides logging functions for a project.  Essential way to track events and issues during execution.
-   * 
+   * Markdown cells: turn your input into clean, readable text like you'd see in a report.  It's helpful for adding notes, explanations, or even formatting your notebook like a guide. 
+    
 2. COMMANDS
    * Change pathway from Repo Folder to store-smart-shelayne-smith
      1. File - Open Folder - Navigate to store-smart-shelayne-smith within File Explorer and select
@@ -42,10 +43,8 @@
    
 3.  NOTES
    *  All information is for Windows users only
-    * Markdown cells turn your input into clean, readable text like you'd see in a report.  It's helpful for adding notes, explanations, or even formatting your notebook like a guide. 
-    * NOTE: Double check file names
-    1.  Ran into an issue with python script because there was a space in logger.py which made it so the system couldn't find the pathway to run the scripts
+   * Ran into an issue with python script because there was a space in logger.py which made it so the system couldn't find the pathway to run the scripts
+     *  NOTE: Double check file names
    
-
 4.  USEFUL TOOLS
    1. ChatGPT - helpful tool to understanding processes & visualizing steps required.  Provides additional commands for troubleshooting
