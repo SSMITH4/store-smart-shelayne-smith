@@ -1,10 +1,13 @@
 # store-smart-shelayne-smith
 
 1. UNDERSTANDING & SET-UP FOLDERS/FILES
-   *  .gitignore: File lists content that doesn't need to be tracked in the project history
-   * requirements.txt lists all the packages the project needs
+   * .gitignore: File lists content that doesn't need to be tracked in the project history
+   * requirements.txt: lists all the packages the project needs
      * Lines starting with a hash are ignored when installing packages using this file
-     * You can comment them in all environment in Python - it's a self contained environment that includes its own Python interpreter,   pip, and libraries. Helps manage dependencies per project, so they don't interfere with other projects or system-wide Python.
+   * .venv -virtual environment in Python: self-containing environent that includes its own Python interpreter,   pip, and libraries. Helps manage dependencies per project, so they don't interfere with other projects or system-wide Python.
+   * demo_notebook.ipynb: demonstrates how your project works using an interactive, easy-to-follow format (typically in Jupyter Notebook)
+   * demo_script.py: A very simple Python script to demonstrate basic features
+   * utils_logger.py: This script provides logging functions for a project.  Essential way to track events and issues during execution.
    * 
 2. COMMANDS
    * Change pathway from Repo Folder to store-smart-shelayne-smith
