@@ -45,6 +45,10 @@
    *  All information is for Windows users only
    * Ran into an issue with python script because there was a space in logger.py which made it so the system couldn't find the pathway to run the scripts
      *  NOTE: Double check file names
+     *  FAKE DATA
+        *  When you fake data, you can be creative- missing information, values that are outside acceptable ranges, and/or perfectly clean data. It is best to start with simple, clean data, and AFTER everything is working, go back and modify the fake data to make your analysis more challenging.
+         *  Avoid spacing in new column titles
+         *  Follow existing naming conventions - use the pattern already provided in your data tables.
    
 4.  USEFUL TOOLS
    1. ChatGPT - helpful tool to understanding processes & visualizing steps required.  Provides additional commands for troubleshooting
