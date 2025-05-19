@@ -117,7 +117,6 @@ def main() -> None:
     if changed_columns:
         logger.info(f"Cleaned column names: {', '.join(changed_columns)}")
 
-    # 
     # Remove duplicates
     df = remove_duplicates(df)
 
