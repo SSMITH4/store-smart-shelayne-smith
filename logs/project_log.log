@@ -292,3 +292,39 @@ dtype: int64
 2025-05-19 12:31:48.153 | INFO     | __main__:main:132 - ==================================
 2025-05-19 12:31:48.153 | INFO     | __main__:main:133 - FINISHED prepare_sales_data.py
 2025-05-19 12:31:48.153 | INFO     | __main__:main:134 - ==================================
+2025-05-19 12:45:53.891 | INFO     | __main__:main:89 - ==================================
+2025-05-19 12:45:53.891 | INFO     | __main__:main:90 - STARTING prepare_sales_data.py
+2025-05-19 12:45:53.891 | INFO     | __main__:main:91 - ==================================
+2025-05-19 12:45:53.891 | INFO     | __main__:main:93 - Root         : C:\Repo\store-smart-shelayne-smith
+2025-05-19 12:45:53.891 | INFO     | __main__:main:94 - data/raw     : C:\Repo\store-smart-shelayne-smith\data\raw
+2025-05-19 12:45:53.892 | INFO     | __main__:main:95 - data/prepared: C:\Repo\store-smart-shelayne-smith\data\prepared
+2025-05-19 12:45:53.892 | INFO     | __main__:main:96 - scripts      : C:\Repo\store-smart-shelayne-smith\scripts
+2025-05-19 12:45:53.892 | INFO     | __main__:read_raw_data:66 - FUNCTION START: read_raw_data with file_name=sales_data.csv
+2025-05-19 12:45:53.892 | INFO     | __main__:read_raw_data:68 - Reading data from C:\Repo\store-smart-shelayne-smith\data\raw\sales_data.csv
+2025-05-19 12:45:53.896 | INFO     | __main__:read_raw_data:70 - Loaded dataframe with 2001 rows and 9 columns
+2025-05-19 12:45:53.897 | INFO     | __main__:main:108 - Initial dataframe columns: TransactionID, SaleDate, CustomerID, ProductID, StoreID, CampaignID, SaleAmount, BonusPoints, PaymentType
+2025-05-19 12:45:53.897 | INFO     | __main__:main:109 - Initial dataframe shape: (2001, 9)
+2025-05-19 12:45:53.898 | INFO     | __main__:main:129 - ==================================
+2025-05-19 12:45:53.898 | INFO     | __main__:main:130 - Original shape: (2001, 9)
+2025-05-19 12:45:53.898 | INFO     | __main__:main:131 - Cleaned shape:  (2001, 9)
+2025-05-19 12:45:53.899 | INFO     | __main__:main:132 - ==================================
+2025-05-19 12:45:53.899 | INFO     | __main__:main:133 - FINISHED prepare_sales_data.py
+2025-05-19 12:45:53.899 | INFO     | __main__:main:134 - ==================================
+2025-05-19 14:46:55.516 | INFO     | __main__:main:89 - ==================================
+2025-05-19 14:46:55.516 | INFO     | __main__:main:90 - STARTING prepare_sales_data.py
+2025-05-19 14:46:55.516 | INFO     | __main__:main:91 - ==================================
+2025-05-19 14:46:55.516 | INFO     | __main__:main:93 - Root         : C:\Repo\store-smart-shelayne-smith
+2025-05-19 14:46:55.517 | INFO     | __main__:main:94 - data/raw     : C:\Repo\store-smart-shelayne-smith\data\raw
+2025-05-19 14:46:55.517 | INFO     | __main__:main:95 - data/prepared: C:\Repo\store-smart-shelayne-smith\data\prepared
+2025-05-19 14:46:55.517 | INFO     | __main__:main:96 - scripts      : C:\Repo\store-smart-shelayne-smith\scripts
+2025-05-19 14:46:55.517 | INFO     | __main__:read_raw_data:66 - FUNCTION START: read_raw_data with file_name=sales_data.csv
+2025-05-19 14:46:55.517 | INFO     | __main__:read_raw_data:68 - Reading data from C:\Repo\store-smart-shelayne-smith\data\raw\sales_data.csv
+2025-05-19 14:46:55.521 | INFO     | __main__:read_raw_data:70 - Loaded dataframe with 2001 rows and 9 columns
+2025-05-19 14:46:55.522 | INFO     | __main__:main:108 - Initial dataframe columns: TransactionID, SaleDate, CustomerID, ProductID, StoreID, CampaignID, SaleAmount, BonusPoints, PaymentType
+2025-05-19 14:46:55.522 | INFO     | __main__:main:109 - Initial dataframe shape: (2001, 9)
+2025-05-19 14:46:55.523 | INFO     | __main__:main:129 - ==================================
+2025-05-19 14:46:55.523 | INFO     | __main__:main:130 - Original shape: (2001, 9)
+2025-05-19 14:46:55.524 | INFO     | __main__:main:131 - Cleaned shape:  (2001, 9)
+2025-05-19 14:46:55.524 | INFO     | __main__:main:132 - ==================================
+2025-05-19 14:46:55.524 | INFO     | __main__:main:133 - FINISHED prepare_sales_data.py
+2025-05-19 14:46:55.524 | INFO     | __main__:main:134 - ==================================
