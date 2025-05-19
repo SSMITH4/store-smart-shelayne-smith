@@ -26,3 +26,269 @@
 2025-05-15 15:47:17.786 | INFO     | __main__:process_data:60 - Data shape (ct of rows, ct of columns): (2001, 7).
 2025-05-15 15:47:17.787 | INFO     | __main__:process_data:61 - Data columns: ['TransactionID', 'SaleDate', 'CustomerID', 'ProductID', 'StoreID', 'CampaignID', 'SaleAmount'].
 2025-05-15 15:47:17.787 | INFO     | __main__:main:85 - Data preparation complete.
+2025-05-19 12:21:19.304 | INFO     | __main__:main:171 - ==================================
+2025-05-19 12:21:19.305 | INFO     | __main__:main:172 - STARTING prepare_customers_data.py
+2025-05-19 12:21:19.306 | INFO     | __main__:main:173 - ==================================
+2025-05-19 12:21:19.306 | INFO     | __main__:main:175 - Root         : C:\Repo\store-smart-shelayne-smith
+2025-05-19 12:21:19.306 | INFO     | __main__:main:176 - data/raw     : C:\Repo\store-smart-shelayne-smith\data\raw
+2025-05-19 12:21:19.307 | INFO     | __main__:main:177 - data/prepared: C:\Repo\store-smart-shelayne-smith\data\prepared
+2025-05-19 12:21:19.308 | INFO     | __main__:main:178 - scripts      : C:\Repo\store-smart-shelayne-smith\scripts
+2025-05-19 12:21:19.309 | INFO     | __main__:read_raw_data:58 - READING: C:\Repo\store-smart-shelayne-smith\data\raw\customers_data.csv.
+2025-05-19 12:21:19.332 | INFO     | __main__:main:190 - Initial dataframe columns: CustomerID, Name, Region, JoinDate, LoyaltyPoints, CustomerSegment
+2025-05-19 12:21:19.335 | INFO     | __main__:main:191 - Initial dataframe shape: (201, 6)
+2025-05-19 12:21:19.338 | INFO     | __main__:remove_duplicates:94 - FUNCTION START: remove_duplicates with dataframe shape=(201, 6)
+2025-05-19 12:21:19.354 | INFO     | __main__:remove_duplicates:105 - Original dataframe shape: (201, 6)
+2025-05-19 12:21:19.354 | INFO     | __main__:remove_duplicates:106 - Deduped  dataframe shape: (201, 6)
+2025-05-19 12:21:19.355 | INFO     | __main__:handle_missing_values:122 - FUNCTION START: handle_missing_values with dataframe shape=(201, 6)
+2025-05-19 12:21:19.357 | INFO     | __main__:handle_missing_values:126 - Total missing values before handling: 0
+2025-05-19 12:21:19.358 | INFO     | __main__:handle_missing_values:135 - Total missing values after handling: 0
+2025-05-19 12:21:19.359 | INFO     | __main__:handle_missing_values:136 - 201 records remaining after handling missing values.
+2025-05-19 12:21:19.360 | INFO     | __main__:remove_outliers:150 - FUNCTION START: remove_outliers with dataframe shape=(201, 6)
+2025-05-19 12:21:19.361 | INFO     | __main__:remove_outliers:158 - Removed 0 outlier rows
+2025-05-19 12:21:19.361 | INFO     | __main__:remove_outliers:159 - 201 records remaining after removing outliers.
+2025-05-19 12:21:19.362 | INFO     | __main__:save_prepared_data:76 - FUNCTION START: save_prepared_data with file_name=customers_prepared.csv, dataframe shape=(201, 6)
+2025-05-19 12:21:19.381 | INFO     | __main__:save_prepared_data:79 - Data saved to C:\Repo\store-smart-shelayne-smith\data\prepared\customers_prepared.csv
+2025-05-19 12:21:19.382 | INFO     | __main__:main:214 - ==================================
+2025-05-19 12:21:19.383 | INFO     | __main__:main:215 - Original shape: (201, 6)
+2025-05-19 12:21:19.384 | INFO     | __main__:main:216 - Cleaned shape:  (201, 6)
+2025-05-19 12:21:19.385 | INFO     | __main__:main:217 - ==================================
+2025-05-19 12:21:19.386 | INFO     | __main__:main:218 - FINISHED prepare_customers_data.py
+2025-05-19 12:21:19.387 | INFO     | __main__:main:219 - ==================================
+2025-05-19 12:21:20.164 | INFO     | __main__:main:232 - ==================================
+2025-05-19 12:21:20.165 | INFO     | __main__:main:233 - STARTING prepare_products_data.py
+2025-05-19 12:21:20.166 | INFO     | __main__:main:234 - ==================================
+2025-05-19 12:21:20.166 | INFO     | __main__:main:236 - Root         : C:\Repo\store-smart-shelayne-smith
+2025-05-19 12:21:20.167 | INFO     | __main__:main:237 - data/raw     : C:\Repo\store-smart-shelayne-smith\data\raw
+2025-05-19 12:21:20.167 | INFO     | __main__:main:238 - data/prepared: C:\Repo\store-smart-shelayne-smith\data\prepared
+2025-05-19 12:21:20.168 | INFO     | __main__:main:239 - scripts      : C:\Repo\store-smart-shelayne-smith\scripts
+2025-05-19 12:21:20.168 | INFO     | __main__:read_raw_data:64 - FUNCTION START: read_raw_data with file_name=products_data.csv
+2025-05-19 12:21:20.169 | INFO     | __main__:read_raw_data:66 - Reading data from C:\Repo\store-smart-shelayne-smith\data\raw\products_data.csv
+2025-05-19 12:21:20.172 | INFO     | __main__:read_raw_data:68 - Loaded dataframe with 100 rows and 6 columns
+2025-05-19 12:21:20.177 | INFO     | __main__:read_raw_data:64 - FUNCTION START: read_raw_data with file_name=products_data.csv
+2025-05-19 12:21:20.178 | INFO     | __main__:read_raw_data:66 - Reading data from C:\Repo\store-smart-shelayne-smith\data\raw\products_data.csv
+2025-05-19 12:21:20.180 | INFO     | __main__:read_raw_data:68 - Loaded dataframe with 100 rows and 6 columns
+2025-05-19 12:21:20.182 | INFO     | __main__:main:254 - Initial dataframe columns: ProductID, ProductName, Category, UnitPrice, StockQuantity, Supplier
+2025-05-19 12:21:20.182 | INFO     | __main__:main:255 - Initial dataframe shape: (100, 6)
+2025-05-19 12:21:20.186 | INFO     | __main__:main:264 - Cleaned column names: ProductID -> productid, ProductName -> productname, Category -> category, UnitPrice -> unitprice, StockQuantity -> stockquantity, Supplier -> supplier
+2025-05-19 12:21:20.187 | INFO     | __main__:remove_duplicates:101 - FUNCTION START: remove_duplicates with dataframe shape=(100, 6)
+2025-05-19 12:21:20.195 | INFO     | __main__:remove_duplicates:111 - Removed 0 duplicate rows
+2025-05-19 12:21:20.199 | INFO     | __main__:remove_duplicates:112 - 100 records remaining after removing duplicates.
+2025-05-19 12:21:20.200 | INFO     | __main__:handle_missing_values:126 - FUNCTION START: handle_missing_values with dataframe shape=(100, 6)
+2025-05-19 12:21:20.203 | INFO     | __main__:handle_missing_values:131 - Missing values by column before handling:
+productid        0
+productname      0
+category         0
+unitprice        0
+stockquantity    0
+supplier         0
+dtype: int64
+2025-05-19 12:21:20.205 | INFO     | __main__:handle_missing_values:145 - Missing values by column after handling:
+productid        0
+productname      0
+category         0
+unitprice        0
+stockquantity    0
+supplier         0
+dtype: int64
+2025-05-19 12:21:20.206 | INFO     | __main__:handle_missing_values:146 - 100 records remaining after handling missing values.
+2025-05-19 12:21:20.206 | INFO     | __main__:remove_outliers:160 - FUNCTION START: remove_outliers with dataframe shape=(100, 6)
+2025-05-19 12:21:20.207 | INFO     | __main__:remove_outliers:179 - Removed 0 outlier rows
+2025-05-19 12:21:20.207 | INFO     | __main__:remove_outliers:180 - 100 records remaining after removing outliers.
+2025-05-19 12:21:20.208 | INFO     | __main__:validate_data:216 - FUNCTION START: validate_data with dataframe shape=(100, 6)
+2025-05-19 12:21:20.208 | INFO     | __main__:validate_data:225 - Data validation complete
+2025-05-19 12:21:20.209 | INFO     | __main__:standardize_formats:193 - FUNCTION START: standardize_formats with dataframe shape=(100, 6)
+2025-05-19 12:21:20.209 | INFO     | __main__:standardize_formats:203 - Completed standardizing formats
+2025-05-19 12:21:20.209 | INFO     | __main__:save_prepared_data:86 - FUNCTION START: save_prepared_data with file_name=products_prepared.csv, dataframe shape=(100, 6)
+2025-05-19 12:21:20.215 | INFO     | __main__:save_prepared_data:89 - Data saved to C:\Repo\store-smart-shelayne-smith\data\prepared\products_prepared.csv
+2025-05-19 12:21:20.216 | INFO     | __main__:main:284 - ==================================
+2025-05-19 12:21:20.217 | INFO     | __main__:main:285 - Original shape: (100, 6)
+2025-05-19 12:21:20.217 | INFO     | __main__:main:286 - Cleaned shape:  (100, 6)
+2025-05-19 12:21:20.217 | INFO     | __main__:main:287 - ==================================
+2025-05-19 12:21:20.218 | INFO     | __main__:main:288 - FINISHED prepare_products_data.py
+2025-05-19 12:21:20.218 | INFO     | __main__:main:289 - ==================================
+2025-05-19 12:21:40.547 | INFO     | __main__:main:89 - ==================================
+2025-05-19 12:21:40.547 | INFO     | __main__:main:90 - STARTING prepare_sales_data.py
+2025-05-19 12:21:40.547 | INFO     | __main__:main:91 - ==================================
+2025-05-19 12:21:40.547 | INFO     | __main__:main:93 - Root         : C:\Repo\store-smart-shelayne-smith
+2025-05-19 12:21:40.548 | INFO     | __main__:main:94 - data/raw     : C:\Repo\store-smart-shelayne-smith\data\raw
+2025-05-19 12:21:40.548 | INFO     | __main__:main:95 - data/prepared: C:\Repo\store-smart-shelayne-smith\data\prepared
+2025-05-19 12:21:40.548 | INFO     | __main__:main:96 - scripts      : C:\Repo\store-smart-shelayne-smith\scripts
+2025-05-19 12:21:40.548 | INFO     | __main__:read_raw_data:66 - FUNCTION START: read_raw_data with file_name=sales_data.csv
+2025-05-19 12:21:40.548 | INFO     | __main__:read_raw_data:68 - Reading data from C:\Repo\store-smart-shelayne-smith\data\raw\sales_data.csv
+2025-05-19 12:21:40.559 | INFO     | __main__:read_raw_data:70 - Loaded dataframe with 2001 rows and 9 columns
+2025-05-19 12:21:40.560 | INFO     | __main__:main:108 - Initial dataframe columns: TransactionID, SaleDate, CustomerID, ProductID, StoreID, CampaignID, SaleAmount, BonusPoints, PaymentType
+2025-05-19 12:21:40.560 | INFO     | __main__:main:109 - Initial dataframe shape: (2001, 9)
+2025-05-19 12:21:40.560 | INFO     | __main__:main:129 - ==================================
+2025-05-19 12:21:40.562 | INFO     | __main__:main:130 - Original shape: (2001, 9)
+2025-05-19 12:21:40.562 | INFO     | __main__:main:131 - Cleaned shape:  (2001, 9)
+2025-05-19 12:21:40.563 | INFO     | __main__:main:132 - ==================================
+2025-05-19 12:21:40.563 | INFO     | __main__:main:133 - FINISHED prepare_sales_data.py
+2025-05-19 12:21:40.563 | INFO     | __main__:main:134 - ==================================
+2025-05-19 12:30:02.544 | INFO     | __main__:main:89 - ==================================
+2025-05-19 12:30:02.544 | INFO     | __main__:main:90 - STARTING prepare_sales_data.py
+2025-05-19 12:30:02.544 | INFO     | __main__:main:91 - ==================================
+2025-05-19 12:30:02.545 | INFO     | __main__:main:93 - Root         : C:\Repo\store-smart-shelayne-smith
+2025-05-19 12:30:02.545 | INFO     | __main__:main:94 - data/raw     : C:\Repo\store-smart-shelayne-smith\data\raw
+2025-05-19 12:30:02.545 | INFO     | __main__:main:95 - data/prepared: C:\Repo\store-smart-shelayne-smith\data\prepared
+2025-05-19 12:30:02.545 | INFO     | __main__:main:96 - scripts      : C:\Repo\store-smart-shelayne-smith\scripts
+2025-05-19 12:30:02.545 | INFO     | __main__:read_raw_data:66 - FUNCTION START: read_raw_data with file_name=sales_data.csv
+2025-05-19 12:30:02.545 | INFO     | __main__:read_raw_data:68 - Reading data from C:\Repo\store-smart-shelayne-smith\data\raw\sales_data.csv
+2025-05-19 12:30:02.549 | INFO     | __main__:read_raw_data:70 - Loaded dataframe with 2001 rows and 9 columns
+2025-05-19 12:30:02.550 | INFO     | __main__:main:108 - Initial dataframe columns: TransactionID, SaleDate, CustomerID, ProductID, StoreID, CampaignID, SaleAmount, BonusPoints, PaymentType
+2025-05-19 12:30:02.553 | INFO     | __main__:main:109 - Initial dataframe shape: (2001, 9)
+2025-05-19 12:30:02.554 | INFO     | __main__:main:129 - ==================================
+2025-05-19 12:30:02.556 | INFO     | __main__:main:130 - Original shape: (2001, 9)
+2025-05-19 12:30:02.556 | INFO     | __main__:main:131 - Cleaned shape:  (2001, 9)
+2025-05-19 12:30:02.557 | INFO     | __main__:main:132 - ==================================
+2025-05-19 12:30:02.557 | INFO     | __main__:main:133 - FINISHED prepare_sales_data.py
+2025-05-19 12:30:02.557 | INFO     | __main__:main:134 - ==================================
+2025-05-19 12:30:38.634 | INFO     | __main__:main:232 - ==================================
+2025-05-19 12:30:38.635 | INFO     | __main__:main:233 - STARTING prepare_products_data.py
+2025-05-19 12:30:38.635 | INFO     | __main__:main:234 - ==================================
+2025-05-19 12:30:38.635 | INFO     | __main__:main:236 - Root         : C:\Repo\store-smart-shelayne-smith
+2025-05-19 12:30:38.635 | INFO     | __main__:main:237 - data/raw     : C:\Repo\store-smart-shelayne-smith\data\raw
+2025-05-19 12:30:38.635 | INFO     | __main__:main:238 - data/prepared: C:\Repo\store-smart-shelayne-smith\data\prepared
+2025-05-19 12:30:38.635 | INFO     | __main__:main:239 - scripts      : C:\Repo\store-smart-shelayne-smith\scripts
+2025-05-19 12:30:38.636 | INFO     | __main__:read_raw_data:64 - FUNCTION START: read_raw_data with file_name=products_data.csv
+2025-05-19 12:30:38.636 | INFO     | __main__:read_raw_data:66 - Reading data from C:\Repo\store-smart-shelayne-smith\data\raw\products_data.csv
+2025-05-19 12:30:38.638 | INFO     | __main__:read_raw_data:68 - Loaded dataframe with 100 rows and 6 columns
+2025-05-19 12:30:38.638 | INFO     | __main__:read_raw_data:64 - FUNCTION START: read_raw_data with file_name=products_data.csv
+2025-05-19 12:30:38.638 | INFO     | __main__:read_raw_data:66 - Reading data from C:\Repo\store-smart-shelayne-smith\data\raw\products_data.csv
+2025-05-19 12:30:38.640 | INFO     | __main__:read_raw_data:68 - Loaded dataframe with 100 rows and 6 columns
+2025-05-19 12:30:38.640 | INFO     | __main__:main:254 - Initial dataframe columns: ProductID, ProductName, Category, UnitPrice, StockQuantity, Supplier
+2025-05-19 12:30:38.640 | INFO     | __main__:main:255 - Initial dataframe shape: (100, 6)
+2025-05-19 12:30:38.643 | INFO     | __main__:main:264 - Cleaned column names: ProductID -> productid, ProductName -> productname, Category -> category, UnitPrice -> unitprice, StockQuantity -> stockquantity, Supplier -> supplier
+2025-05-19 12:30:38.643 | INFO     | __main__:remove_duplicates:101 - FUNCTION START: remove_duplicates with dataframe shape=(100, 6)
+2025-05-19 12:30:38.646 | INFO     | __main__:remove_duplicates:111 - Removed 0 duplicate rows
+2025-05-19 12:30:38.646 | INFO     | __main__:remove_duplicates:112 - 100 records remaining after removing duplicates.
+2025-05-19 12:30:38.646 | INFO     | __main__:handle_missing_values:126 - FUNCTION START: handle_missing_values with dataframe shape=(100, 6)
+2025-05-19 12:30:38.648 | INFO     | __main__:handle_missing_values:131 - Missing values by column before handling:
+productid        0
+productname      0
+category         0
+unitprice        0
+stockquantity    0
+supplier         0
+dtype: int64
+2025-05-19 12:30:38.652 | INFO     | __main__:handle_missing_values:145 - Missing values by column after handling:
+productid        0
+productname      0
+category         0
+unitprice        0
+stockquantity    0
+supplier         0
+dtype: int64
+2025-05-19 12:30:38.652 | INFO     | __main__:handle_missing_values:146 - 100 records remaining after handling missing values.
+2025-05-19 12:30:38.653 | INFO     | __main__:remove_outliers:160 - FUNCTION START: remove_outliers with dataframe shape=(100, 6)
+2025-05-19 12:30:38.653 | INFO     | __main__:remove_outliers:179 - Removed 0 outlier rows
+2025-05-19 12:30:38.654 | INFO     | __main__:remove_outliers:180 - 100 records remaining after removing outliers.
+2025-05-19 12:30:38.654 | INFO     | __main__:validate_data:216 - FUNCTION START: validate_data with dataframe shape=(100, 6)
+2025-05-19 12:30:38.654 | INFO     | __main__:validate_data:225 - Data validation complete
+2025-05-19 12:30:38.654 | INFO     | __main__:standardize_formats:193 - FUNCTION START: standardize_formats with dataframe shape=(100, 6)
+2025-05-19 12:30:38.655 | INFO     | __main__:standardize_formats:203 - Completed standardizing formats
+2025-05-19 12:30:38.655 | INFO     | __main__:save_prepared_data:86 - FUNCTION START: save_prepared_data with file_name=products_prepared.csv, dataframe shape=(100, 6)
+2025-05-19 12:30:38.662 | INFO     | __main__:save_prepared_data:89 - Data saved to C:\Repo\store-smart-shelayne-smith\data\prepared\products_prepared.csv
+2025-05-19 12:30:38.662 | INFO     | __main__:main:284 - ==================================
+2025-05-19 12:30:38.662 | INFO     | __main__:main:285 - Original shape: (100, 6)
+2025-05-19 12:30:38.662 | INFO     | __main__:main:286 - Cleaned shape:  (100, 6)
+2025-05-19 12:30:38.662 | INFO     | __main__:main:287 - ==================================
+2025-05-19 12:30:38.662 | INFO     | __main__:main:288 - FINISHED prepare_products_data.py
+2025-05-19 12:30:38.663 | INFO     | __main__:main:289 - ==================================
+2025-05-19 12:30:45.275 | INFO     | __main__:main:171 - ==================================
+2025-05-19 12:30:45.276 | INFO     | __main__:main:172 - STARTING prepare_customers_data.py
+2025-05-19 12:30:45.276 | INFO     | __main__:main:173 - ==================================
+2025-05-19 12:30:45.276 | INFO     | __main__:main:175 - Root         : C:\Repo\store-smart-shelayne-smith
+2025-05-19 12:30:45.276 | INFO     | __main__:main:176 - data/raw     : C:\Repo\store-smart-shelayne-smith\data\raw
+2025-05-19 12:30:45.276 | INFO     | __main__:main:177 - data/prepared: C:\Repo\store-smart-shelayne-smith\data\prepared
+2025-05-19 12:30:45.277 | INFO     | __main__:main:178 - scripts      : C:\Repo\store-smart-shelayne-smith\scripts
+2025-05-19 12:30:45.277 | INFO     | __main__:read_raw_data:58 - READING: C:\Repo\store-smart-shelayne-smith\data\raw\customers_data.csv.
+2025-05-19 12:30:45.279 | INFO     | __main__:main:190 - Initial dataframe columns: CustomerID, Name, Region, JoinDate, LoyaltyPoints, CustomerSegment
+2025-05-19 12:30:45.279 | INFO     | __main__:main:191 - Initial dataframe shape: (201, 6)
+2025-05-19 12:30:45.280 | INFO     | __main__:remove_duplicates:94 - FUNCTION START: remove_duplicates with dataframe shape=(201, 6)
+2025-05-19 12:30:45.281 | INFO     | __main__:remove_duplicates:105 - Original dataframe shape: (201, 6)
+2025-05-19 12:30:45.281 | INFO     | __main__:remove_duplicates:106 - Deduped  dataframe shape: (201, 6)
+2025-05-19 12:30:45.281 | INFO     | __main__:handle_missing_values:122 - FUNCTION START: handle_missing_values with dataframe shape=(201, 6)
+2025-05-19 12:30:45.283 | INFO     | __main__:handle_missing_values:126 - Total missing values before handling: 0
+2025-05-19 12:30:45.285 | INFO     | __main__:handle_missing_values:135 - Total missing values after handling: 0
+2025-05-19 12:30:45.285 | INFO     | __main__:handle_missing_values:136 - 201 records remaining after handling missing values.
+2025-05-19 12:30:45.286 | INFO     | __main__:remove_outliers:150 - FUNCTION START: remove_outliers with dataframe shape=(201, 6)
+2025-05-19 12:30:45.287 | INFO     | __main__:remove_outliers:158 - Removed 0 outlier rows
+2025-05-19 12:30:45.288 | INFO     | __main__:remove_outliers:159 - 201 records remaining after removing outliers.
+2025-05-19 12:30:45.289 | INFO     | __main__:save_prepared_data:76 - FUNCTION START: save_prepared_data with file_name=customers_prepared.csv, dataframe shape=(201, 6)
+2025-05-19 12:30:45.295 | INFO     | __main__:save_prepared_data:79 - Data saved to C:\Repo\store-smart-shelayne-smith\data\prepared\customers_prepared.csv
+2025-05-19 12:30:45.295 | INFO     | __main__:main:214 - ==================================
+2025-05-19 12:30:45.296 | INFO     | __main__:main:215 - Original shape: (201, 6)
+2025-05-19 12:30:45.296 | INFO     | __main__:main:216 - Cleaned shape:  (201, 6)
+2025-05-19 12:30:45.296 | INFO     | __main__:main:217 - ==================================
+2025-05-19 12:30:45.296 | INFO     | __main__:main:218 - FINISHED prepare_customers_data.py
+2025-05-19 12:30:45.297 | INFO     | __main__:main:219 - ==================================
+2025-05-19 12:30:53.029 | INFO     | __main__:main:232 - ==================================
+2025-05-19 12:30:53.029 | INFO     | __main__:main:233 - STARTING prepare_products_data.py
+2025-05-19 12:30:53.030 | INFO     | __main__:main:234 - ==================================
+2025-05-19 12:30:53.030 | INFO     | __main__:main:236 - Root         : C:\Repo\store-smart-shelayne-smith
+2025-05-19 12:30:53.030 | INFO     | __main__:main:237 - data/raw     : C:\Repo\store-smart-shelayne-smith\data\raw
+2025-05-19 12:30:53.030 | INFO     | __main__:main:238 - data/prepared: C:\Repo\store-smart-shelayne-smith\data\prepared
+2025-05-19 12:30:53.030 | INFO     | __main__:main:239 - scripts      : C:\Repo\store-smart-shelayne-smith\scripts
+2025-05-19 12:30:53.030 | INFO     | __main__:read_raw_data:64 - FUNCTION START: read_raw_data with file_name=products_data.csv
+2025-05-19 12:30:53.030 | INFO     | __main__:read_raw_data:66 - Reading data from C:\Repo\store-smart-shelayne-smith\data\raw\products_data.csv
+2025-05-19 12:30:53.033 | INFO     | __main__:read_raw_data:68 - Loaded dataframe with 100 rows and 6 columns
+2025-05-19 12:30:53.033 | INFO     | __main__:read_raw_data:64 - FUNCTION START: read_raw_data with file_name=products_data.csv
+2025-05-19 12:30:53.033 | INFO     | __main__:read_raw_data:66 - Reading data from C:\Repo\store-smart-shelayne-smith\data\raw\products_data.csv
+2025-05-19 12:30:53.035 | INFO     | __main__:read_raw_data:68 - Loaded dataframe with 100 rows and 6 columns
+2025-05-19 12:30:53.035 | INFO     | __main__:main:254 - Initial dataframe columns: ProductID, ProductName, Category, UnitPrice, StockQuantity, Supplier
+2025-05-19 12:30:53.035 | INFO     | __main__:main:255 - Initial dataframe shape: (100, 6)
+2025-05-19 12:30:53.036 | INFO     | __main__:main:264 - Cleaned column names: ProductID -> productid, ProductName -> productname, Category -> category, UnitPrice -> unitprice, StockQuantity -> stockquantity, Supplier -> supplier
+2025-05-19 12:30:53.036 | INFO     | __main__:remove_duplicates:101 - FUNCTION START: remove_duplicates with dataframe shape=(100, 6)
+2025-05-19 12:30:53.037 | INFO     | __main__:remove_duplicates:111 - Removed 0 duplicate rows
+2025-05-19 12:30:53.037 | INFO     | __main__:remove_duplicates:112 - 100 records remaining after removing duplicates.
+2025-05-19 12:30:53.038 | INFO     | __main__:handle_missing_values:126 - FUNCTION START: handle_missing_values with dataframe shape=(100, 6)
+2025-05-19 12:30:53.038 | INFO     | __main__:handle_missing_values:131 - Missing values by column before handling:
+productid        0
+productname      0
+category         0
+unitprice        0
+stockquantity    0
+supplier         0
+dtype: int64
+2025-05-19 12:30:53.039 | INFO     | __main__:handle_missing_values:145 - Missing values by column after handling:
+productid        0
+productname      0
+category         0
+unitprice        0
+stockquantity    0
+supplier         0
+dtype: int64
+2025-05-19 12:30:53.039 | INFO     | __main__:handle_missing_values:146 - 100 records remaining after handling missing values.
+2025-05-19 12:30:53.039 | INFO     | __main__:remove_outliers:160 - FUNCTION START: remove_outliers with dataframe shape=(100, 6)
+2025-05-19 12:30:53.040 | INFO     | __main__:remove_outliers:179 - Removed 0 outlier rows
+2025-05-19 12:30:53.040 | INFO     | __main__:remove_outliers:180 - 100 records remaining after removing outliers.
+2025-05-19 12:30:53.040 | INFO     | __main__:validate_data:216 - FUNCTION START: validate_data with dataframe shape=(100, 6)
+2025-05-19 12:30:53.040 | INFO     | __main__:validate_data:225 - Data validation complete
+2025-05-19 12:30:53.040 | INFO     | __main__:standardize_formats:193 - FUNCTION START: standardize_formats with dataframe shape=(100, 6)
+2025-05-19 12:30:53.041 | INFO     | __main__:standardize_formats:203 - Completed standardizing formats
+2025-05-19 12:30:53.041 | INFO     | __main__:save_prepared_data:86 - FUNCTION START: save_prepared_data with file_name=products_prepared.csv, dataframe shape=(100, 6)
+2025-05-19 12:30:53.048 | INFO     | __main__:save_prepared_data:89 - Data saved to C:\Repo\store-smart-shelayne-smith\data\prepared\products_prepared.csv
+2025-05-19 12:30:53.048 | INFO     | __main__:main:284 - ==================================
+2025-05-19 12:30:53.051 | INFO     | __main__:main:285 - Original shape: (100, 6)
+2025-05-19 12:30:53.055 | INFO     | __main__:main:286 - Cleaned shape:  (100, 6)
+2025-05-19 12:30:53.055 | INFO     | __main__:main:287 - ==================================
+2025-05-19 12:30:53.056 | INFO     | __main__:main:288 - FINISHED prepare_products_data.py
+2025-05-19 12:30:53.056 | INFO     | __main__:main:289 - ==================================
+2025-05-19 12:31:48.144 | INFO     | __main__:main:89 - ==================================
+2025-05-19 12:31:48.145 | INFO     | __main__:main:90 - STARTING prepare_sales_data.py
+2025-05-19 12:31:48.145 | INFO     | __main__:main:91 - ==================================
+2025-05-19 12:31:48.145 | INFO     | __main__:main:93 - Root         : C:\Repo\store-smart-shelayne-smith
+2025-05-19 12:31:48.145 | INFO     | __main__:main:94 - data/raw     : C:\Repo\store-smart-shelayne-smith\data\raw
+2025-05-19 12:31:48.145 | INFO     | __main__:main:95 - data/prepared: C:\Repo\store-smart-shelayne-smith\data\prepared
+2025-05-19 12:31:48.145 | INFO     | __main__:main:96 - scripts      : C:\Repo\store-smart-shelayne-smith\scripts
+2025-05-19 12:31:48.146 | INFO     | __main__:read_raw_data:66 - FUNCTION START: read_raw_data with file_name=sales_data.csv
+2025-05-19 12:31:48.146 | INFO     | __main__:read_raw_data:68 - Reading data from C:\Repo\store-smart-shelayne-smith\data\raw\sales_data.csv
+2025-05-19 12:31:48.150 | INFO     | __main__:read_raw_data:70 - Loaded dataframe with 2001 rows and 9 columns
+2025-05-19 12:31:48.150 | INFO     | __main__:main:108 - Initial dataframe columns: TransactionID, SaleDate, CustomerID, ProductID, StoreID, CampaignID, SaleAmount, BonusPoints, PaymentType
+2025-05-19 12:31:48.150 | INFO     | __main__:main:109 - Initial dataframe shape: (2001, 9)
+2025-05-19 12:31:48.151 | INFO     | __main__:main:129 - ==================================
+2025-05-19 12:31:48.152 | INFO     | __main__:main:130 - Original shape: (2001, 9)
+2025-05-19 12:31:48.153 | INFO     | __main__:main:131 - Cleaned shape:  (2001, 9)
+2025-05-19 12:31:48.153 | INFO     | __main__:main:132 - ==================================
+2025-05-19 12:31:48.153 | INFO     | __main__:main:133 - FINISHED prepare_sales_data.py
+2025-05-19 12:31:48.153 | INFO     | __main__:main:134 - ==================================
