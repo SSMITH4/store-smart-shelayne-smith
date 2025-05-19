@@ -117,13 +117,24 @@ def main() -> None:
     if changed_columns:
         logger.info(f"Cleaned column names: {', '.join(changed_columns)}")
 
-    # TODO: Remove duplicates
+    # 
+    # Remove duplicates
+    df = remove_duplicates(df)
 
-    # TODO:Handle missing values
+    # Handle missing values
+    df = handle_missing_values(df)
 
     # TODO:Remove outliers
+    df = remove_outliers(df)
 
-    # TODO:Save prepared data
+    # TODO: Validate data
+    df = validate_data(df)
+
+    # TODO: Standardize formats
+    df = standardize_formats(df)
+
+    # Save prepared data
+    save_prepared_data(df, output_file)
     
 
     logger.info("==================================")
