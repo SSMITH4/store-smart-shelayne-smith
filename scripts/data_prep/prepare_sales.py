@@ -68,6 +68,20 @@ def read_raw_data(file_name: str) -> pd.DataFrame:
     logger.info(f"Reading data from {file_path}")
     df = pd.read_csv(file_path)
     logger.info(f"Loaded dataframe with {len(df)} rows and {len(df.columns)} columns")
+
+def save_prepared_data(df: pd.DataFrame, file_name: str) -> None:
+    """
+    Save cleaned data to CSV.
+
+    Args:
+        df (pd.DataFrame): Cleaned DataFrame.
+        file_name (str): Name of the output file.
+    """
+    logger.info(f"FUNCTION START: save_prepared_data with file_name={file_name}, dataframe shape={df.shape}")
+    file_path = PREPARED_DATA_DIR.joinpath(file_name)
+    df.to_csv(file_path, index=False)
+    logger.info(f"Data saved to {file_path}")
+
     
     # TODO: OPTIONAL Add data profiling here to understand the dataset
     # Suggestion: Log the datatypes of each column and the number of unique values
@@ -124,7 +138,7 @@ def main() -> None:
     # TODO:Remove outliers
 
     # TODO:Save prepared data
-    
+    save_prepared_data(df, output_file)
 
     logger.info("==================================")
     logger.info(f"Original shape: {df.shape}")
