@@ -124,7 +124,7 @@ def main() -> None:
     # TODO:Remove outliers
 
     # TODO:Save prepared data
-    
+    save_prepared_data(df, output_file)
 
     logger.info("==================================")
     logger.info(f"Original shape: {df.shape}")
