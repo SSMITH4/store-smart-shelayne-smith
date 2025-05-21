@@ -473,3 +473,31 @@ dtype: int64
 2025-05-21 07:49:06.569 | INFO     | __main__:main:217 - ==================================
 2025-05-21 07:49:06.569 | INFO     | __main__:main:218 - FINISHED prepare_customers_data.py
 2025-05-21 07:49:06.569 | INFO     | __main__:main:219 - ==================================
+2025-05-21 07:54:29.571 | INFO     | __main__:main:171 - ==================================
+2025-05-21 07:54:29.571 | INFO     | __main__:main:172 - STARTING prepare_customers_data.py
+2025-05-21 07:54:29.571 | INFO     | __main__:main:173 - ==================================
+2025-05-21 07:54:29.571 | INFO     | __main__:main:175 - Root         : C:\Repo\store-smart-shelayne-smith
+2025-05-21 07:54:29.572 | INFO     | __main__:main:176 - data/raw     : C:\Repo\store-smart-shelayne-smith\data\raw
+2025-05-21 07:54:29.572 | INFO     | __main__:main:177 - data/prepared: C:\Repo\store-smart-shelayne-smith\data\prepared
+2025-05-21 07:54:29.572 | INFO     | __main__:main:178 - scripts      : C:\Repo\store-smart-shelayne-smith\scripts
+2025-05-21 07:54:29.572 | INFO     | __main__:read_raw_data:58 - READING: C:\Repo\store-smart-shelayne-smith\data\raw\customers_data.csv.
+2025-05-21 07:54:29.575 | INFO     | __main__:main:190 - Initial dataframe columns: CustomerID, Name, Region, JoinDate, LoyaltyPoints, CustomerSegment
+2025-05-21 07:54:29.575 | INFO     | __main__:main:191 - Initial dataframe shape: (200, 6)
+2025-05-21 07:54:29.575 | INFO     | __main__:remove_duplicates:94 - FUNCTION START: remove_duplicates with dataframe shape=(200, 6)
+2025-05-21 07:54:29.577 | INFO     | __main__:remove_duplicates:105 - Original dataframe shape: (200, 6)
+2025-05-21 07:54:29.577 | INFO     | __main__:remove_duplicates:106 - Deduped  dataframe shape: (200, 6)
+2025-05-21 07:54:29.578 | INFO     | __main__:handle_missing_values:122 - FUNCTION START: handle_missing_values with dataframe shape=(200, 6)
+2025-05-21 07:54:29.578 | INFO     | __main__:handle_missing_values:126 - Total missing values before handling: 0
+2025-05-21 07:54:29.579 | INFO     | __main__:handle_missing_values:135 - Total missing values after handling: 0
+2025-05-21 07:54:29.579 | INFO     | __main__:handle_missing_values:136 - 200 records remaining after handling missing values.
+2025-05-21 07:54:29.579 | INFO     | __main__:remove_outliers:150 - FUNCTION START: remove_outliers with dataframe shape=(200, 6)
+2025-05-21 07:54:29.580 | INFO     | __main__:remove_outliers:158 - Removed 0 outlier rows
+2025-05-21 07:54:29.580 | INFO     | __main__:remove_outliers:159 - 200 records remaining after removing outliers.
+2025-05-21 07:54:29.581 | INFO     | __main__:save_prepared_data:76 - FUNCTION START: save_prepared_data with file_name=customers_prepared.csv, dataframe shape=(200, 6)
+2025-05-21 07:54:29.590 | INFO     | __main__:save_prepared_data:79 - Data saved to C:\Repo\store-smart-shelayne-smith\data\prepared\customers_prepared.csv
+2025-05-21 07:54:29.590 | INFO     | __main__:main:214 - ==================================
+2025-05-21 07:54:29.591 | INFO     | __main__:main:215 - Original shape: (200, 6)
+2025-05-21 07:54:29.591 | INFO     | __main__:main:216 - Cleaned shape:  (200, 6)
+2025-05-21 07:54:29.591 | INFO     | __main__:main:217 - ==================================
+2025-05-21 07:54:29.591 | INFO     | __main__:main:218 - FINISHED prepare_customers_data.py
+2025-05-21 07:54:29.592 | INFO     | __main__:main:219 - ==================================
