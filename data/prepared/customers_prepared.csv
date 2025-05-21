@@ -4,7 +4,7 @@ CustomerID,Name,Region,JoinDate,LoyaltyPoints,CustomerSegment
 1002,Mark Marshall,Central,8/8/2020,50,25
 1003,David Brennan,North,5/21/2020,125,18
 1004,Kerry Collins,North,9/12/2023,300,50
-1005,Jessica Mora,South,8/5/2021,100,57
+1005,Jessica Mora,South,8/5/2021,125,36
 1006,Hannah Ray,West,7/3/2021,50,53
 1007,David Kim,West,5/20/2020,50,51
 1008,William Ramirez,EAST,9/15/2023,100,23
@@ -199,4 +199,3 @@ CustomerID,Name,Region,JoinDate,LoyaltyPoints,CustomerSegment
 1197,William Wilson,West,4/4/2023,100,53
 1198,Chris Allen,south-west,10/11/2022,200,74
 1199,James Cooley,West,7/23/2020,0,37
-1005,Jessica Mora,South,8/5/2021,125,36
