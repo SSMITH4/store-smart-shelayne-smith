@@ -122,7 +122,7 @@ def handle_missing_values(df: pd.DataFrame) -> pd.DataFrame:
     logger.info(f"Total missing values before handling: {missing_before}")
     
     # Fill missing values in the Name column with 'Unknown'
-    df.fillna(subset={'Unknown'}, inplace=True)
+    df.fillna({'Name': 'Unknown'}, inplace=True)
 
     #Drop any rows where the CustomerID column is missing
     df.dropna(subset=['CustomerID'], inplace=True)
