@@ -101,11 +101,8 @@ def remove_duplicates(df: pd.DataFrame) -> pd.DataFrame:
     logger.info(f"FUNCTION START: remove_duplicates with dataframe shape={df.shape}")
     initial_count = len(df)
     
-    # TODO: Consider which columns should be used to identify duplicates
-    # Example: For products, SKU or product code is typically unique
-    # So we could do something like this:
-    # df = df.drop_duplicates(subset=['product_code'])
-    df = df.drop_duplicates()
+    # Consider which columns should be used to identify duplicates
+    df = df.drop_duplicates(subset=['productid'])
     
     removed_count = initial_count - len(df)
     logger.info(f"Removed {removed_count} duplicate rows")
@@ -130,11 +127,8 @@ def handle_missing_values(df: pd.DataFrame) -> pd.DataFrame:
     missing_by_col = df.isna().sum()
     logger.info(f"Missing values by column before handling:\n{missing_by_col}")
     
-    # TODO: OPTIONAL - We can implement appropriate missing value handling 
-    # specific to our data. 
-    # For example: Different strategies may be needed for different columns
-    # USE YOUR COLUMN NAMES - these are just examples
-    # df['product_name'].fillna('Unknown Product', inplace=True)
+    # missing value handling specific to our data. 
+    df.fillna({'productname':'Unknown Product'}, inplace=True)
     # df['description'].fillna('', inplace=True)
     # df['price'].fillna(df['price'].median(), inplace=True)
     # df['category'].fillna(df['category'].mode()[0], inplace=True)
@@ -160,9 +154,14 @@ def remove_outliers(df: pd.DataFrame) -> pd.DataFrame:
     logger.info(f"FUNCTION START: remove_outliers with dataframe shape={df.shape}")
     initial_count = len(df)
     
-    # TODO: Identify numeric columns that might have outliers.
-    # Recommended - just use ranges based on reasonable data
-    # People should not be 22 feet tall, etc. 
+    # stockquantity should not be below 0
+    # Count how many a invalid (NaN or <= 0)
+    invalid_count = df[(df['stockquantity'].isna()) | (df['stockquantity'] <= 0)].shape[0]
+    logger.info(f"Found {invalid_count} rows with invalid stockquantity")
+
+    #remove those rows
+    df = df[df['stockquantity'] > 0]
+
     # OPTIONAL ADVANCED: Use IQR method to identify outliers in numeric columns
     # Example:
     # for col in ['price', 'weight', 'length', 'width', 'height']:
@@ -215,12 +214,10 @@ def validate_data(df: pd.DataFrame) -> pd.DataFrame:
     """
     logger.info(f"FUNCTION START: validate_data with dataframe shape={df.shape}")
     
-    # TODO: Implement data validation rules specific to products
-    # Suggestion: Check for valid values in critical fields
-    # Example:
-    # invalid_prices = df[df['price'] < 0].shape[0]
+    # Implement data validation rules specific to products
+    # invalid_prices = df[df['unitprice'] < 0].shape[0] #shows those that are negative prices
     # logger.info(f"Found {invalid_prices} products with negative prices")
-    # df = df[df['price'] >= 0]
+    # df = df[df['unitprice'] >= 0] # keeps only the ones that are greater or equal to 0
     
     logger.info("Data validation complete")
     return df
