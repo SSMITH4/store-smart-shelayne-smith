@@ -1,5 +1,5 @@
 """
-scripts/data_preparation/prepare_customers.py
+scripts/data_preparation/prepare_customers_data.py
 
 This script reads customer data from the data/raw folder, cleans the data, 
 and writes the cleaned version to the data/prepared folder.
@@ -120,11 +120,11 @@ def handle_missing_values(df: pd.DataFrame) -> pd.DataFrame:
     # Log missing values count before handling
     missing_before = df.isna().sum().sum()
     logger.info(f"Total missing values before handling: {missing_before}")
-    
+
     # Fill missing values in the Name column with 'Unknown'
     df.fillna({'Name': 'Unknown'}, inplace=True)
 
-    #Drop any rows where the CustomerID column is missing
+    # Drop any rows where the CustomerID column is missing
     df.dropna(subset=['CustomerID'], inplace=True)
     
     # Log missing values count after handling
@@ -148,7 +148,7 @@ def remove_outliers(df: pd.DataFrame) -> pd.DataFrame:
     initial_count = len(df)
     
     # Define numeric columns and apply rules for outlier removal
-    # df = df[(df['Age'] > 18) & (df['Age'] < 100)]
+    df = df[(df['Age'] > 1) & (df['Age'] < 100)]
     
     removed_count = initial_count - len(df)
     logger.info(f"Removed {removed_count} outlier rows")
@@ -174,7 +174,7 @@ def main() -> None:
     logger.info(f"scripts      : {SCRIPTS_DIR}")
 
     input_file = "customers_data.csv"
-    output_file = "customers_prepared.csv"
+    output_file = "customers_data_prepared.csv"
     
     # Read raw data
     df = read_raw_data(input_file)
