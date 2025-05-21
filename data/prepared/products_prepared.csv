@@ -1,0 +1,101 @@
+productid,productname,category,unitprice,stockquantity,supplier
+2000,Electronics-Be,Electronics,969.31,1500,Walmart
+2001,Electronics-Be,Clothing,412.35,1345,Target
+2002,Office-Family,Clothing,866.0,100,Sam's Club
+2003,Electronics-Training,Clothing,385.18,260,Sam's Club
+2004,Office-Where,Home,927.25,1000,Big Lots
+2005,Office-Huge,Home,428.78,350,Costco
+2006,Office-Class,Clothing,198.0,450,Amazon
+2007,Clothing-Over,Electronics,583.39,660,Target
+2008,Electronics-Skin,Home,66.59,3800,Amazon
+2009,Office-Raise,Clothing,66.31,1300,Sam's Club
+2010,Electronics-Themselves,Clothing,77.84,1600,Walmart
+2011,Electronics-Religious,Clothing,409.74,370,Costco
+2012,Clothing-Artist,Electronics,623.19,950,Sam's Club
+2013,Office-Cultural,Home,935.36,350,Amazon
+2014,Clothing-Eat,Home,246.3,450,Big Lots
+2015,Office-Itself,Clothing,674.97,400,Target
+2016,Home-He,Office,323.02,100,Amazon
+2017,Electronics-Feeling,Electronics,463.7,50,Costco
+2018,Electronics-Nature,Electronics,542.26,3600,Costco
+2019,Home-History,Clothing,933.93,750,Walmart
+2020,Electronics-Share,Clothing,375.83,258,Amazon
+2021,Clothing-Skill,Office,835.41,235,Amazon
+2022,Home-Economy,Electronics,671.18,165,Amazon
+2023,Home-Yeah,Electronics,939.54,378,Sam's Club
+2024,Clothing-Paper,Home,124.27,800,Target
+2025,Electronics-Assume,Clothing,279.62,1236,Target
+2026,Clothing-Use,Home,211.56,1450,Big Lots
+2027,Home-Purpose,Office,258.61,1597,Sam's Club
+2028,Electronics-Take,Electronics,637.94,3675,Sam's Club
+2029,Home-Yourself,Electronics,13.51,4685,Amazon
+2030,Clothing-First,Home,169.97,2001,Walmart
+2031,Office-Develop,Office,565.3,1022,Sam's Club
+2032,Electronics-There,Electronics,945.6,5348,Walmart
+2033,Clothing-Argue,Electronics,836.25,2673,Big Lots
+2034,Clothing-Feel,Office,136.17,2813,Costco
+2035,Home-According,Home,899.99,5824,Target
+2036,Electronics-Candidate,Home,217.98,6481,Amazon
+2037,Clothing-Meeting,Electronics,360.14,2379,Walmart
+2038,Office-Soon,Clothing,926.51,2648,Costco
+2039,Clothing-Need,Clothing,976.44,100,Sam's Club
+2040,Clothing-Determine,Office,34.54,3005,Walmart
+2041,Home-Assume,Office,804.21,264,Costco
+2042,Clothing-Lawyer,Home,167.61,500,Target
+2043,Electronics-Practice,Office,873.45,153,Sam's Club
+2044,Office-Society,Clothing,207.58,345,Amazon
+2045,Office-Next,Home,312.14,624,Amazon
+2046,Clothing-Worry,Clothing,33.43,7925,Walmart
+2047,Clothing-Hair,Office,334.98,1003,Amazon
+2048,Electronics-Candidate,Home,357.63,3510,Amazon
+2049,Office-Easy,Home,939.84,346,Target
+2050,Electronics-Young,Home,186.78,563,Sam's Club
+2051,Home-Century,Electronics,117.32,1257,Walmart
+2052,Office-Year,Home,731.26,1258,Amazon
+2053,Home-Ground,Office,610.15,1369,Target
+2054,Electronics-Above,Office,900.51,536,Amazon
+2055,Clothing-Politics,Home,53.94,354,Walmart
+2056,Office-About,Electronics,524.72,356,Big Lots
+2057,Clothing-Identify,Home,436.98,301,Sam's Club
+2058,Home-Wear,Home,666.75,235,Sam's Club
+2059,Electronics-Clear,Home,512.05,1345,Target
+2060,Office-Term,Home,408.38,100,Big Lots
+2061,Home-Quite,Clothing,199.92,260,Target
+2062,Office-Receive,Clothing,619.36,1000,Amazon
+2063,Home-Good,Office,552.46,350,Amazon
+2064,Electronics-Stop,Home,294.04,450,Sam's Club
+2065,Office-Animal,Home,470.34,660,Amazon
+2066,Office-Occur,Clothing,516.06,3800,Target
+2067,Clothing-Remain,Electronics,290.95,1300,Costco
+2068,Home-Read,Electronics,820.24,1600,Costco
+2069,Clothing-Garden,Home,232.39,370,Sam's Club
+2070,Clothing-About,Clothing,34.18,950,Amazon
+2071,Clothing-Success,Office,615.16,350,Amazon
+2072,Electronics-Become,Office,420.3,450,Target
+2073,Clothing-Executive,Office,499.43,400,Amazon
+2074,Clothing-Strong,Clothing,659.5,100,Costco
+2075,Electronics-Letter,Electronics,780.64,50,Amazon
+2076,Clothing-Affect,Clothing,806.07,3600,Walmart
+2077,Office-Ball,Electronics,561.83,750,Amazon
+2078,Electronics-Film,Office,142.01,258,Sam's Club
+2079,Office-Who,Home,950.54,235,Target
+2080,Office-Doctor,Office,832.26,165,Sam's Club
+2081,Office-Light,Clothing,746.22,378,Costco
+2082,Office-Figure,Office,266.6,800,Amazon
+2083,Clothing-Cut,Home,768.16,1236,Target
+2084,Office-Stuff,Clothing,281.85,1450,Amazon
+2085,Electronics-Officer,Home,242.15,1597,Walmart
+2086,Home-Of,Home,894.1,10,Big Lots
+2087,Electronics-Rather,Clothing,159.32,102,Sam's Club
+2088,Office-Evening,Clothing,709.35,320,Target
+2089,Electronics-Action,Office,413.52,4561,Amazon
+2090,Office-Staff,Office,71.64,6578,Amazon
+2091,Office-Mrs,Office,905.79,4302,Walmart
+2092,Electronics-Add,Office,482.21,100,Sam's Club
+2093,Home-Real,Home,755.94,150,Amazon
+2094,Office-Fight,Clothing,493.35,3682,Target
+2095,Home-Seem,Office,490.79,235,Amazon
+2096,Office-Discuss,Home,672.18,1687,Sam's Club
+2097,Office-Recent,Clothing,842.1,239,Sam's Club
+2098,Clothing-Trouble,Electronics,907.86,2011,Walmart
+2099,Electronics-Several,Electronics,646.32,1098,Costco
