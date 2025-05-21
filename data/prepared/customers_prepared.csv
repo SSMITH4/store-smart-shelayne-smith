@@ -1,4 +1,4 @@
-CustomerID,Name,Region,JoinDate,LoyaltyPoints,CustomerSegment
+CustomerID,Name,Region,JoinDate,LoyaltyPoints,Age
 1000,Robert Gomez,West,2/25/2024,100,A
 1001,John Silva,East,12/1/2020,50,B
 1002,Mark Marshall,Central,8/8/2020,50,C
