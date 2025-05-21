@@ -64,7 +64,6 @@ def read_raw_data(file_name: str) -> pd.DataFrame:
         logger.error(f"Error reading {file_path}: {e}")
         return pd.DataFrame()  # Return an empty DataFrame if any other error occurs
 
-
 def save_prepared_data(df: pd.DataFrame, file_name: str) -> None:
     """
     Save cleaned data to CSV.
@@ -77,7 +76,6 @@ def save_prepared_data(df: pd.DataFrame, file_name: str) -> None:
     file_path = PREPARED_DATA_DIR.joinpath(file_name)
     df.to_csv(file_path, index=False)
     logger.info(f"Data saved to {file_path}")
-
 
 def remove_duplicates(df: pd.DataFrame) -> pd.DataFrame:
     """
@@ -106,8 +104,6 @@ def remove_duplicates(df: pd.DataFrame) -> pd.DataFrame:
     logger.info(f"Deduped  dataframe shape: {df_deduped.shape}")
     return df_deduped
 
-
-
 def handle_missing_values(df: pd.DataFrame) -> pd.DataFrame:
     """
     Handle missing values by filling or dropping.
@@ -125,10 +121,11 @@ def handle_missing_values(df: pd.DataFrame) -> pd.DataFrame:
     missing_before = df.isna().sum().sum()
     logger.info(f"Total missing values before handling: {missing_before}")
     
-    # TODO: Fill or drop missing values based on business rules
-    # Example:
-    # df['CustomerName'].fillna('Unknown', inplace=True)
-    # df.dropna(subset=['CustomerID'], inplace=True)
+    # Fill missing values in the Name column with 'Unknown'
+    df.fillna(subset={'Unknown'}, inplace=True)
+
+    #Drop any rows where the CustomerID column is missing
+    df.dropna(subset=['CustomerID'], inplace=True)
     
     # Log missing values count after handling
     missing_after = df.isna().sum().sum()
@@ -150,8 +147,7 @@ def remove_outliers(df: pd.DataFrame) -> pd.DataFrame:
     logger.info(f"FUNCTION START: remove_outliers with dataframe shape={df.shape}")
     initial_count = len(df)
     
-    # TODO: Define numeric columns and apply rules for outlier removal
-    # Example:
+    # Define numeric columns and apply rules for outlier removal
     # df = df[(df['Age'] > 18) & (df['Age'] < 100)]
     
     removed_count = initial_count - len(df)
