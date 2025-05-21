@@ -1,5 +1,5 @@
 """
-scripts/data_preparation/prepare_sales.py
+scripts/data_preparation/prepare_sales_data.py
 
 This script reads data from the data/raw folder, cleans the data, 
 and writes the cleaned version to the data/prepared folder.
@@ -17,29 +17,28 @@ Tasks:
 #####################################
 
 # Import from Python Standard Library
-import pathlib
 import sys
+import pathlib
 
-# Import from external packages (requires a virtual environment)
+# Force project root to the front of sys.path
+project_root = str(pathlib.Path(__file__).resolve().parents[2])
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
+import os
 import pandas as pd
 
-# Ensure project root is in sys.path for local imports (now 3 parents are needed)
-sys.path.append(str(pathlib.Path(__file__).resolve().parent.parent.parent))
-
-# Import local modules (e.g. utils/logger.py)
-from utils.logger import logger  
-
-# Optional: Use a data_scrubber module for common data cleaning tasks
-from utils.data_scrubber import DataScrubber  
-
+from utils.logger import logger
+from utils.data_scrubber import DataScrubber
 
 # Constants
 SCRIPTS_DATA_PREP_DIR: pathlib.Path = pathlib.Path(__file__).resolve().parent  # Directory of the current script
-SCRIPTS_DIR: pathlib.Path = SCRIPTS_DATA_PREP_DIR.parent 
-PROJECT_ROOT: pathlib.Path = SCRIPTS_DIR.parent 
-DATA_DIR: pathlib.Path = PROJECT_ROOT/ "data" 
-RAW_DATA_DIR: pathlib.Path = DATA_DIR / "raw"  
+SCRIPTS_DIR: pathlib.Path = SCRIPTS_DATA_PREP_DIR.parent
+PROJECT_ROOT: pathlib.Path = SCRIPTS_DIR.parent
+DATA_DIR: pathlib.Path = PROJECT_ROOT / "data"
+RAW_DATA_DIR: pathlib.Path = DATA_DIR / "raw"
 PREPARED_DATA_DIR: pathlib.Path = DATA_DIR / "prepared"  # place to store prepared data
+
 
 
 # Ensure the directories exist or create them
@@ -76,6 +75,20 @@ def read_raw_data(file_name: str) -> pd.DataFrame:
     # logger.info(f"Number of unique values: \n{df.nunique()}")
     
     return df
+
+    # Add Save Function to the Script
+
+def save_prepared_data(df: pd.DataFrame, file_name: str) -> None:
+    """
+    Save cleaned data to CSV.
+
+    Args:
+        df (pd.DataFrame): Cleaned DataFrame.
+        file_name (str): Name of the output file.
+    """
+    file_path = PREPARED_DATA_DIR.joinpath(file_name)
+    logger.info(f"Saving cleaned data to {file_path}")
+    df.to_csv(file_path, index=False)
 
 
 #####################################
@@ -124,7 +137,10 @@ def main() -> None:
     # TODO:Remove outliers
 
     # TODO:Save prepared data
+
     
+    
+    save_prepared_data(df, output_file)
 
     logger.info("==================================")
     logger.info(f"Original shape: {df.shape}")
