@@ -1,8 +1,8 @@
 CustomerID,Name,Region,JoinDate,LoyaltyPoints,Age
-1000,Robert Gomez,West,2/25/2024,100,A
-1001,John Silva,East,12/1/2020,50,B
-1002,Mark Marshall,Central,8/8/2020,50,C
-1003,David Brennan,North,5/21/2020,125,D
+1000,Robert Gomez,West,2/25/2024,100,500
+1001,John Silva,East,12/1/2020,50,150
+1002,Mark Marshall,Central,8/8/2020,50,0
+1003,David Brennan,North,5/21/2020,125,200
 1004,Kerry Collins,North,9/12/2023,300,50
 1005,Jessica Mora,South,8/5/2021,125,36
 1006,Hannah Ray,West,7/3/2021,50,53
