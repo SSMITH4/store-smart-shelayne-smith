@@ -43,7 +43,7 @@
    * Module 3 scripts (update to run correctly)
      * py scripts/data_preparation/prepare_customers_data.py
      * py scripts/data_preparation/prepare_products_data.py
-     * py scripts/data_preparation/prepare_products_data.py
+     * py scripts/data_preparation/prepare_sales_data.py
    
 3.  NOTES
    *  All information is for Windows users only
