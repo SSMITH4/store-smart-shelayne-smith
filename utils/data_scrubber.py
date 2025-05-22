@@ -155,7 +155,7 @@ class DataScrubber:
             ValueError: If the specified column not found in the DataFrame.
         """
         try:
-            # Fix the following logic to call str.upper() and str.strip() on the given column 
+        # Fix the following logic to call str.upper() and str.strip() on the given column 
             self.df[column] = self.df[column].str.upper().str.strip()
             return self.df
         except KeyError:
