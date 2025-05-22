@@ -53,6 +53,20 @@
         *  When you fake data, you can be creative- missing information, values that are outside acceptable ranges, and/or perfectly clean data. It is best to start with simple, clean data, and AFTER everything is working, go back and modify the fake data to make your analysis more challenging.
          *  Avoid spacing in new column titles
          *  Follow existing naming conventions - use the pattern already provided in your data tables.
+   *  D3-Notes
+      *  Ran test script py tests\test_data_scrubber.py, received error No module names 'utils'.  It means Python cannot find the utils folder in your project when trying to import something like: from utils.logger import logger.  
+      *  Fixes:
+         *  Option 1: Add the project root to sys.path
+            *  At the top of your Python script or test file, add:
+               *  imports sys
+               *  import pathlib
+               *  # Add the root directory of your project to the system path
+               *  sys.path.append(str(pathlib.path(__file__).resolve().parent.parent))
+               *  If your test file is in tests/test_data_scrubber.py, this goes at the top of that file.
+         *  Option 2
+            *  Run the script from the project root (this is what I used to run test successfully)
+               *  Instead of python tests/test_data_scrubber.py, do python -m tests.test_data_scrubber
+                  *  Note: Make sure you are in your project root folder when running this.
    
 4.  USEFUL TOOLS
    1. ChatGPT - helpful tool to understanding processes & visualizing steps required.  Provides additional commands for troubleshooting
