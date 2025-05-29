@@ -142,8 +142,7 @@ def populate_dw() -> None:
             "productname": "product_name",
             "Category": "category",
             "unitprice": "unit_price",
-            "stockquantity": "stock_quantity",
-            "supplier": "Supplier"
+            "supplier": "supplier"
         })
 
         df_products.to_sql("products", conn, if_exists="append", index=False)
