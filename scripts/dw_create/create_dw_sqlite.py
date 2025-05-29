@@ -124,7 +124,9 @@ def populate_dw() -> None:
             "CustomerID": "customer_id",
             "Name": "name",
             "Region": "region",
-            "JoinDate": "join_date"
+            "JoinDate": "join_date",
+            "LoyaltlyPoints": "loyalty_points",
+            "Age": "Age"
         })
 
         df_customers.to_sql("customers", conn, if_exists="append", index=False)
@@ -136,10 +138,12 @@ def populate_dw() -> None:
 
         df_products = pd.read_csv(DATA_PREPARED_DIR / "products_prepared.csv")
         df_products = df_products.rename(columns={
-            "ProductID": "product_id",
-            "ProductName": "product_name",
+            "productid": "product_id",
+            "productname": "product_name",
             "Category": "category",
-            "UnitPrice": "unit_price"
+            "unitprice": "unit_price",
+            "stockquantity": "stock_quantity",
+            "supplier": "Supplier"
         })
 
         df_products.to_sql("products", conn, if_exists="append", index=False)
@@ -157,7 +161,9 @@ def populate_dw() -> None:
             "ProductID": "product_id",
             "StoreID": "store_id",
             "CampaignID": "campaign_id",
-            "SaleAmount": "sales_amount"
+            "SaleAmount": "sales_amount",
+            "BonusPoints": "bonus_points",
+            "PaymentType": "payment_type"
         })
 
         # TODO: Decide if you want to drop any unused columns in any of the tables
@@ -169,6 +175,9 @@ def populate_dw() -> None:
             "product_id",
             "quantity",
             "sales_amount",
+            "bonus_points",
+            "payment_type"
+          
         ]
         df_sales = df_sales[
             [col for col in expected_columns if col in df_sales.columns]
