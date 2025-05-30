@@ -87,3 +87,4 @@
                * with sqlite3.connect(DB_PATH) as conn:
                * cursor = conn.cursor()
                * add DW_DIR.mkdir(parent=True, exist_ok=True) before with sqlite3.connect(DB_PATH) as conn:
+ 5. SCREENSHOTS
