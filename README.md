@@ -44,6 +44,8 @@
      * py scripts/data_preparation/prepare_customers_data.py
      * py scripts/data_preparation/prepare_products_data.py
      * py scripts/data_preparation/prepare_sales_data.py
+   * Module 4 script
+     * python scripts/etl_to_dw.py (successful)
    
 3.  NOTES
    *  All information is for Windows users only
@@ -67,6 +69,21 @@
             *  Run the script from the project root (this is what I used to run test successfully)
                *  Instead of python tests/test_data_scrubber.py, do python -m tests.test_data_scrubber
                   *  Note: Make sure you are in your project root folder when running this.
+   *  P4. Create and Populate DW
+      *  Double check spelling of column names
+         *  Issue: incorrect column name titles caused errors when creating dw. verify and review all column names and make corrections.
+         *  Issue: conn: did not have the correct pathway and was causing sqlite3.OperationalError: unable to open database file.  Put code into ChatGPT to get the conn: to the right pathway.  
+            *  Additional details on entering information into ChatGPT provided below in USEFUL TOOLS.
    
 4.  USEFUL TOOLS
-   1. ChatGPT - helpful tool to understanding processes & visualizing steps required.  Provides additional commands for troubleshooting
+   * ChatGPT - helpful tool to understanding processes & visualizing steps required.  Provides additional commands for troubleshooting
+      * P4. Create and Populate DW
+         * Provide ChatGPT with error message, then provide entire code within etl_to_dw.py
+         * Follow instructions carefully to resolve issues within code. Insert below def load_data_to_db() -> None:
+            * X conn is not defined inside the with block
+               * with sqlite3.connect(DB_PATH):
+               * cursor = conn.cursor()
+            * Fix
+               * with sqlite3.connect(DB_PATH) as conn:
+               * cursor = conn.cursor()
+               * add DW_DIR.mkdir(parent=True, exist_ok=True) before with sqlite3.connect(DB_PATH) as conn:
