@@ -126,7 +126,7 @@ def populate_dw() -> None:
             "Region": "region",
             "JoinDate": "join_date",
             "LoyaltlyPoints": "loyalty_points",
-            "Age": "Age"
+            "Age": "age"
         })
 
         df_customers.to_sql("customers", conn, if_exists="append", index=False)
@@ -142,6 +142,7 @@ def populate_dw() -> None:
             "productname": "product_name",
             "Category": "category",
             "unitprice": "unit_price",
+            "stockquantity": "stock_quantity",
             "supplier": "supplier"
         })
 
