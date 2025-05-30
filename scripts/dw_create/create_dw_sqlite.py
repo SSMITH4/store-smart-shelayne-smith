@@ -155,7 +155,7 @@ def populate_dw() -> None:
 
         df_sales = pd.read_csv(DATA_PREPARED_DIR / "sales_prepared.csv")
         df_sales = df_sales.rename(columns={
-            "TransactionID": "sale_id",
+            "TransactionID": "transaction_id",
             "SaleDate": "date",
             "CustomerID": "customer_id",
             "ProductID": "product_id",
@@ -169,7 +169,7 @@ def populate_dw() -> None:
         # TODO: Decide if you want to drop any unused columns in any of the tables
         # Example of how to drop columns:
         expected_columns = [
-            "sale_id",
+            "transaction_id",
             "date",
             "customer_id",
             "product_id",
