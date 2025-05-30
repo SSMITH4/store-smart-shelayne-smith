@@ -1,90 +1,134 @@
-"""
-scripts/etl_to_dw.py
-
-ETL script to load cleaned data from CSVs into the data warehouse (SQLite).
-
-"""
-
-# === Imports ===
-import sys
-import pathlib
-import sqlite3
 import pandas as pd
+import sqlite3
+import pathlib
+import sys
 
-# Fix path for local imports
-SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
-PROJECT_ROOT = SCRIPT_DIR.parent
-sys.path.append(str(PROJECT_ROOT))
+# For local imports, temporarily add project root to sys.path
+PROJECT_ROOT = pathlib.Path(__file__).resolve().parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.append(str(PROJECT_ROOT))
 
-# Local import
-from utils.logger import logger
+# Constants
+DW_DIR = pathlib.Path("data").joinpath("dw")
+DB_PATH = DW_DIR.joinpath("smart_sales.db")
+PREPARED_DATA_DIR = pathlib.Path("data").joinpath("prepared")
 
-# === Path Constants ===
-DATA_PREPARED_DIR = PROJECT_ROOT / "data" / "prepared"
-DW_PATH = PROJECT_ROOT / "dw" / "smart_sales.sqlite"
+def create_schema(cursor: sqlite3.Cursor) -> None:
+    """Create tables in the data warehouse if they don't exist."""
+    
+    cursor.execute("DROP TABLE IF EXISTS customer")
+    cursor.execute("""
+CREATE TABLE IF NOT EXISTS customer (
+    customer_id INTEGER PRIMARY KEY,
+    name TEXT,
+    region TEXT,
+    join_date TEXT,
+    loyalty_points INTEGER,
+    age INTEGER
+    )
+    """)
 
-# === ETL Function ===
-def load_data_to_dw():
-    logger.info("ETL STARTED: Loading prepared data into data warehouse.")
+    cursor.execute("DROP TABLE IF EXISTS product")
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS product (
+            product_id INTEGER PRIMARY KEY,
+            product_name TEXT,
+            category TEXT,
+            unitprice FLOAT,
+            stock_quantity INTEGER,
+            supplier TEXT
+        )
+    """)
 
-    # Check if the DW file exists
-    if not DW_PATH.exists():
-        logger.error(f"Data warehouse not found at {DW_PATH}. Run create_dw_sqlite.py first.")
-        return
+    cursor.execute("DROP TABLE IF EXISTS sale")
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS sale (
+    transaction_id INTEGER PRIMARY KEY,
+    customer_id INTEGER,
+    product_id INTEGER,
+    sale_amount FLOAT,
+    sale_date TEXT,
+    bonus_points INTEGER,               
+    payment_type TEXT,
+    store_id INTEGER,
+    campaign_id INTEGER,
+    FOREIGN KEY (customer_id) REFERENCES customer (customer_id),
+    FOREIGN KEY (product_id) REFERENCES product (product_id)
+        )
+    """)
+def delete_existing_records(cursor: sqlite3.Cursor) -> None:
+    """Delete all existing records from the customer, product, and sale tables."""
+    cursor.execute("DELETE FROM customer")
+    cursor.execute("DELETE FROM product")
+    cursor.execute("DELETE FROM sale")
 
+def insert_customers(customers_df: pd.DataFrame, cursor: sqlite3.Cursor) -> None:
+    """Insert customer data into the customer table."""
+    customers_df.to_sql("customer", cursor.connection, if_exists="append", index=False)
+
+def insert_products(products_df: pd.DataFrame, cursor: sqlite3.Cursor) -> None:
+    """Insert product data into the product table."""
+    products_df.to_sql("product", cursor.connection, if_exists="append", index=False)
+
+def insert_sales(sales_df: pd.DataFrame, cursor: sqlite3.Cursor) -> None:
+    """Insert sales data into the sales table."""
+    sales_df.to_sql("sale", cursor.connection, if_exists="append", index=False)
+
+def load_data_to_db() -> None:
     try:
-        conn = sqlite3.connect(DW_PATH)
+        # Connect to SQLite – will create the file if it doesn't exist
+        conn = sqlite3.connect(DB_PATH)
+        cursor = conn.cursor()
 
-        # Load Customers
-        df_customers = pd.read_csv(DATA_PREPARED_DIR / "customers_prepared.csv")
-        df_customers = df_customers.rename(columns={
-            "CustomerID": "customer_id",
-            "Name": "name",
-            "Region": "region",
-            "JoinDate": "join_date"
-        })
-        df_customers.to_sql("customers", conn, if_exists="append", index=False)
-        logger.info(f"Inserted {len(df_customers)} rows into customers table.")
+        # Create schema and clear existing records
+        create_schema(cursor)
+        delete_existing_records(cursor)
 
-        # Load Products
-        df_products = pd.read_csv(DATA_PREPARED_DIR / "products_prepared.csv")
-        df_products = df_products.rename(columns={
-            "ProductID": "product_id",
-            "ProductName": "product_name",
-            "Category": "category",
-            "UnitPrice": "unit_price"
-        })
-        df_products.to_sql("products", conn, if_exists="append", index=False)
-        logger.info(f"Inserted {len(df_products)} rows into products table.")
+        # Load prepared data using pandas
+        customers_df = pd.read_csv(PREPARED_DATA_DIR.joinpath("customers_prepared.csv"))
+        products_df = pd.read_csv(PREPARED_DATA_DIR.joinpath("products_prepared.csv"))
+        sales_df = pd.read_csv(PREPARED_DATA_DIR.joinpath("sales_prepared.csv"))
 
-        # Load Sales
-        df_sales = pd.read_csv(DATA_PREPARED_DIR / "sales_prepared.csv")
-        df_sales = df_sales.rename(columns={
-            "TransactionID": "sale_id",
-            "SaleDate": "date",
-            "CustomerID": "customer_id",
-            "ProductID": "product_id",
-            "StoreID": "store_id",
-            "CampaignID": "campaign_id",
-            "SaleAmount": "sales_amount"
-        })
+        customers_df.columns = [col.lower() for col in customers_df.columns]
+        customers_df = customers_df.rename(columns={
+    "customerid": "customer_id",
+    "name": "name",
+    "region": "region",
+    "joindate": "join_date",
+    "loyaltypts": "loyalty_pts",
+    "age": "age"
+})
+        products_df.columns = [col.lower() for col in products_df.columns]
+        products_df = products_df.rename(columns={
+    "productid": "product_id",
+    "productname": "product_name", 
+    "category": "category",
+    "unitprice": "unitprice",
+    "stockquantity": "stock_quantity",
+    "age": "age"
+})
+        sales_df.columns = [col.lower() for col in sales_df.columns]
+        sales_df = sales_df.rename(columns={
+    "transactionid": "transaction_id",
+    "customerid": "customer_id",
+    "productid": "product_id",
+    "saleamount": "sale_amount",
+    "saledate": "sale_date",
+    "bonuspoints": "bonus_points",
+    "payment_type": "payment_type",
+    "storeid": "store_id",
+    "campaignid": "campaign_id"
+})
 
-        expected_columns = [
-            "sale_id", "date", "customer_id",
-            "product_id", "quantity", "sales_amount"
-        ]
-        df_sales = df_sales[[col for col in expected_columns if col in df_sales.columns]]
-        df_sales.to_sql("sales", conn, if_exists="append", index=False)
-        logger.info(f"Inserted {len(df_sales)} rows into sales table.")
+        # Insert data into the database
+        insert_customers(customers_df, cursor)
+        insert_products(products_df, cursor)
+        insert_sales(sales_df, cursor)
 
-        logger.info("✅ ETL COMPLETED SUCCESSFULLY.")
-
-    except Exception as e:
-        logger.error(f"ETL FAILED: {e}")
+        conn.commit()
     finally:
         if conn:
             conn.close()
 
-# === Main Execution ===
 if __name__ == "__main__":
-    load_data_to_dw()
+    load_data_to_db()
