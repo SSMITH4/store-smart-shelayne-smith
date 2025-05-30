@@ -1409,3 +1409,111 @@ dtype: int64
 2025-05-29 17:22:33.079 | INFO     | __main__:populate_dw:113 - Populating SQLite data warehouse from prepared CSVs...
 2025-05-29 17:22:33.098 | INFO     | __main__:populate_dw:133 - Inserted 196 rows into customers table.
 2025-05-29 17:22:33.101 | ERROR    | __main__:populate_dw:191 - Error populating SQLite data warehouse: table products has no column named stockquantity
+2025-05-29 17:55:45.199 | INFO     | __main__:main:200 - ========================================
+2025-05-29 17:55:45.199 | INFO     | __main__:main:201 - Starting: create_dw_sqlite.py
+2025-05-29 17:55:45.200 | INFO     | __main__:main:202 - ========================================
+2025-05-29 17:55:45.200 | INFO     | __main__:main:203 - Root:   C:\Repo\store-smart-shelayne-smith
+2025-05-29 17:55:45.200 | INFO     | __main__:main:204 - Scripts:C:\Repo\store-smart-shelayne-smith\scripts\dw_create
+2025-05-29 17:55:45.200 | INFO     | __main__:main:205 - SQL:    C:\Repo\store-smart-shelayne-smith\sql\dw_create
+2025-05-29 17:55:45.200 | INFO     | __main__:main:206 - Input:  C:\Repo\store-smart-shelayne-smith\data\prepared
+2025-05-29 17:55:45.200 | INFO     | __main__:main:207 - Output: C:\Repo\store-smart-shelayne-smith\dw\smart_sales.sqlite
+2025-05-29 17:55:45.200 | INFO     | __main__:create_dw:76 - Creating data warehouse using SQLite...
+2025-05-29 17:55:45.201 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\00_drop_all_tables.sql
+2025-05-29 17:55:45.230 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\10_create_customers.sql
+2025-05-29 17:55:45.239 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\00_drop_all_tables.sql
+2025-05-29 17:55:45.248 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\20_create_products.sql
+2025-05-29 17:55:45.256 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\90_create_sales.sql
+2025-05-29 17:55:45.265 | INFO     | __main__:create_dw:98 - Data warehouse schema created successfully.
+2025-05-29 17:55:45.270 | INFO     | __main__:populate_dw:113 - Populating SQLite data warehouse from prepared CSVs...
+2025-05-29 17:55:45.290 | INFO     | __main__:populate_dw:133 - Inserted 196 rows into customers table.
+2025-05-29 17:55:45.293 | ERROR    | __main__:populate_dw:191 - Error populating SQLite data warehouse: table products has no column named stockquantity
+2025-05-29 17:57:09.596 | INFO     | __main__:main:201 - ========================================
+2025-05-29 17:57:09.597 | INFO     | __main__:main:202 - Starting: create_dw_sqlite.py
+2025-05-29 17:57:09.597 | INFO     | __main__:main:203 - ========================================
+2025-05-29 17:57:09.597 | INFO     | __main__:main:204 - Root:   C:\Repo\store-smart-shelayne-smith
+2025-05-29 17:57:09.597 | INFO     | __main__:main:205 - Scripts:C:\Repo\store-smart-shelayne-smith\scripts\dw_create
+2025-05-29 17:57:09.597 | INFO     | __main__:main:206 - SQL:    C:\Repo\store-smart-shelayne-smith\sql\dw_create
+2025-05-29 17:57:09.598 | INFO     | __main__:main:207 - Input:  C:\Repo\store-smart-shelayne-smith\data\prepared
+2025-05-29 17:57:09.598 | INFO     | __main__:main:208 - Output: C:\Repo\store-smart-shelayne-smith\dw\smart_sales.sqlite
+2025-05-29 17:57:09.598 | INFO     | __main__:create_dw:76 - Creating data warehouse using SQLite...
+2025-05-29 17:57:09.599 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\00_drop_all_tables.sql
+2025-05-29 17:57:09.626 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\10_create_customers.sql
+2025-05-29 17:57:09.637 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\00_drop_all_tables.sql
+2025-05-29 17:57:09.643 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\20_create_products.sql
+2025-05-29 17:57:09.654 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\90_create_sales.sql
+2025-05-29 17:57:09.661 | INFO     | __main__:create_dw:98 - Data warehouse schema created successfully.
+2025-05-29 17:57:09.667 | INFO     | __main__:populate_dw:113 - Populating SQLite data warehouse from prepared CSVs...
+2025-05-29 17:57:09.689 | INFO     | __main__:populate_dw:133 - Inserted 196 rows into customers table.
+2025-05-29 17:57:09.693 | ERROR    | __main__:populate_dw:192 - Error populating SQLite data warehouse: table products has no column named stock_quantity
+2025-05-30 08:10:02.931 | INFO     | __main__:main:201 - ========================================
+2025-05-30 08:10:02.932 | INFO     | __main__:main:202 - Starting: create_dw_sqlite.py
+2025-05-30 08:10:02.932 | INFO     | __main__:main:203 - ========================================
+2025-05-30 08:10:02.932 | INFO     | __main__:main:204 - Root:   C:\Repo\store-smart-shelayne-smith
+2025-05-30 08:10:02.932 | INFO     | __main__:main:205 - Scripts:C:\Repo\store-smart-shelayne-smith\scripts\dw_create
+2025-05-30 08:10:02.932 | INFO     | __main__:main:206 - SQL:    C:\Repo\store-smart-shelayne-smith\sql\dw_create
+2025-05-30 08:10:02.932 | INFO     | __main__:main:207 - Input:  C:\Repo\store-smart-shelayne-smith\data\prepared
+2025-05-30 08:10:02.932 | INFO     | __main__:main:208 - Output: C:\Repo\store-smart-shelayne-smith\dw\smart_sales.sqlite
+2025-05-30 08:10:02.933 | INFO     | __main__:create_dw:76 - Creating data warehouse using SQLite...
+2025-05-30 08:10:02.933 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\00_drop_all_tables.sql
+2025-05-30 08:10:02.958 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\10_create_customers.sql
+2025-05-30 08:10:02.969 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\00_drop_all_tables.sql
+2025-05-30 08:10:02.975 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\20_create_products.sql
+2025-05-30 08:10:03.130 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\90_create_sales.sql
+2025-05-30 08:10:03.279 | INFO     | __main__:create_dw:98 - Data warehouse schema created successfully.
+2025-05-30 08:10:03.283 | INFO     | __main__:populate_dw:113 - Populating SQLite data warehouse from prepared CSVs...
+2025-05-30 08:10:03.310 | INFO     | __main__:populate_dw:133 - Inserted 196 rows into customers table.
+2025-05-30 08:10:03.313 | ERROR    | __main__:populate_dw:192 - Error populating SQLite data warehouse: table products has no column named stock
+2025-05-30 08:10:44.254 | INFO     | __main__:main:201 - ========================================
+2025-05-30 08:10:44.254 | INFO     | __main__:main:202 - Starting: create_dw_sqlite.py
+2025-05-30 08:10:44.254 | INFO     | __main__:main:203 - ========================================
+2025-05-30 08:10:44.254 | INFO     | __main__:main:204 - Root:   C:\Repo\store-smart-shelayne-smith
+2025-05-30 08:10:44.254 | INFO     | __main__:main:205 - Scripts:C:\Repo\store-smart-shelayne-smith\scripts\dw_create
+2025-05-30 08:10:44.255 | INFO     | __main__:main:206 - SQL:    C:\Repo\store-smart-shelayne-smith\sql\dw_create
+2025-05-30 08:10:44.255 | INFO     | __main__:main:207 - Input:  C:\Repo\store-smart-shelayne-smith\data\prepared
+2025-05-30 08:10:44.255 | INFO     | __main__:main:208 - Output: C:\Repo\store-smart-shelayne-smith\dw\smart_sales.sqlite
+2025-05-30 08:10:44.255 | INFO     | __main__:create_dw:76 - Creating data warehouse using SQLite...
+2025-05-30 08:10:44.256 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\00_drop_all_tables.sql
+2025-05-30 08:10:44.293 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\10_create_customers.sql
+2025-05-30 08:10:44.300 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\00_drop_all_tables.sql
+2025-05-30 08:10:44.309 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\20_create_products.sql
+2025-05-30 08:10:44.318 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\90_create_sales.sql
+2025-05-30 08:10:44.326 | INFO     | __main__:create_dw:98 - Data warehouse schema created successfully.
+2025-05-30 08:10:44.331 | INFO     | __main__:populate_dw:113 - Populating SQLite data warehouse from prepared CSVs...
+2025-05-30 08:10:44.351 | INFO     | __main__:populate_dw:133 - Inserted 196 rows into customers table.
+2025-05-30 08:10:44.355 | ERROR    | __main__:populate_dw:192 - Error populating SQLite data warehouse: table products has no column named stock_quantity
+2025-05-30 08:11:06.195 | INFO     | __main__:main:201 - ========================================
+2025-05-30 08:11:06.196 | INFO     | __main__:main:202 - Starting: create_dw_sqlite.py
+2025-05-30 08:11:06.196 | INFO     | __main__:main:203 - ========================================
+2025-05-30 08:11:06.196 | INFO     | __main__:main:204 - Root:   C:\Repo\store-smart-shelayne-smith
+2025-05-30 08:11:06.196 | INFO     | __main__:main:205 - Scripts:C:\Repo\store-smart-shelayne-smith\scripts\dw_create
+2025-05-30 08:11:06.196 | INFO     | __main__:main:206 - SQL:    C:\Repo\store-smart-shelayne-smith\sql\dw_create
+2025-05-30 08:11:06.196 | INFO     | __main__:main:207 - Input:  C:\Repo\store-smart-shelayne-smith\data\prepared
+2025-05-30 08:11:06.197 | INFO     | __main__:main:208 - Output: C:\Repo\store-smart-shelayne-smith\dw\smart_sales.sqlite
+2025-05-30 08:11:06.197 | INFO     | __main__:create_dw:76 - Creating data warehouse using SQLite...
+2025-05-30 08:11:06.197 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\00_drop_all_tables.sql
+2025-05-30 08:11:06.225 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\10_create_customers.sql
+2025-05-30 08:11:06.235 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\00_drop_all_tables.sql
+2025-05-30 08:11:06.246 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\20_create_products.sql
+2025-05-30 08:11:06.254 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\90_create_sales.sql
+2025-05-30 08:11:06.263 | INFO     | __main__:create_dw:98 - Data warehouse schema created successfully.
+2025-05-30 08:11:06.268 | INFO     | __main__:populate_dw:113 - Populating SQLite data warehouse from prepared CSVs...
+2025-05-30 08:11:06.289 | INFO     | __main__:populate_dw:133 - Inserted 196 rows into customers table.
+2025-05-30 08:11:06.292 | ERROR    | __main__:populate_dw:192 - Error populating SQLite data warehouse: table products has no column named stockquantity
+2025-05-30 08:11:19.062 | INFO     | __main__:main:201 - ========================================
+2025-05-30 08:11:19.062 | INFO     | __main__:main:202 - Starting: create_dw_sqlite.py
+2025-05-30 08:11:19.063 | INFO     | __main__:main:203 - ========================================
+2025-05-30 08:11:19.063 | INFO     | __main__:main:204 - Root:   C:\Repo\store-smart-shelayne-smith
+2025-05-30 08:11:19.063 | INFO     | __main__:main:205 - Scripts:C:\Repo\store-smart-shelayne-smith\scripts\dw_create
+2025-05-30 08:11:19.063 | INFO     | __main__:main:206 - SQL:    C:\Repo\store-smart-shelayne-smith\sql\dw_create
+2025-05-30 08:11:19.063 | INFO     | __main__:main:207 - Input:  C:\Repo\store-smart-shelayne-smith\data\prepared
+2025-05-30 08:11:19.063 | INFO     | __main__:main:208 - Output: C:\Repo\store-smart-shelayne-smith\dw\smart_sales.sqlite
+2025-05-30 08:11:19.064 | INFO     | __main__:create_dw:76 - Creating data warehouse using SQLite...
+2025-05-30 08:11:19.064 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\00_drop_all_tables.sql
+2025-05-30 08:11:19.091 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\10_create_customers.sql
+2025-05-30 08:11:19.101 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\00_drop_all_tables.sql
+2025-05-30 08:11:19.108 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\20_create_products.sql
+2025-05-30 08:11:19.118 | INFO     | __main__:run_sql_file:64 - RUN: C:\Repo\store-smart-shelayne-smith\sql\dw_create\90_create_sales.sql
+2025-05-30 08:11:19.125 | INFO     | __main__:create_dw:98 - Data warehouse schema created successfully.
+2025-05-30 08:11:19.128 | INFO     | __main__:populate_dw:113 - Populating SQLite data warehouse from prepared CSVs...
+2025-05-30 08:11:19.152 | INFO     | __main__:populate_dw:133 - Inserted 196 rows into customers table.
+2025-05-30 08:11:19.155 | ERROR    | __main__:populate_dw:192 - Error populating SQLite data warehouse: table products has no column named stock
