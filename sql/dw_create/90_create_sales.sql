@@ -18,7 +18,7 @@ CREATE TABLE sales (
     campaign_id TEXT,                      -- from CampaignID
     sales_amount REAL,                     -- from SaleAmount
     bonus_points INTEGER,                  -- from BonusPoints
-    payment_type TEXT                      -- from PaymentType
+    payment_type TEXT,                      -- from PaymentType
     FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
     FOREIGN KEY (product_id) REFERENCES products(product_id)
 );
