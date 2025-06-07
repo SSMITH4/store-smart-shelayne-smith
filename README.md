@@ -74,6 +74,18 @@
          *  Issue: incorrect column name titles caused errors when creating dw. verify and review all column names and make corrections.
          *  Issue: conn: did not have the correct pathway and was causing sqlite3.OperationalError: unable to open database file.  Put code into ChatGPT to get the conn: to the right pathway.  
             *  Additional details on entering information into ChatGPT provided below in USEFUL TOOLS.
+   *  P5. Cross-Platform Reporting with Power BI & Spark
+      *  SQL Queries and Reporting using Power BI
+         *  Slicing: Filter the data to view a single layer based on one dimension
+            *  Created slicer for total sales amount per region for each product.  Slicer allows for filtering down to sales amount for a single product per region, and a single region with totals for each product.
+         *  Dicing: Similar to slicing, but on multiple dimensions, creates a subcube from the larger dataset.
+            *  Creating a report that joins sales with customers and products tables (dimensions tables) which produces data showing the top performs.
+         *  Drilldown: Moving from a summary view to more detailed data, while drill-up is the reverse.
+            *  Create drilldown by implementing year, quarter, and month.  This will allow for aggregated data to be drilled down or drillup.
+      *  Dashboard Design
+         *  Implemented drilldown to allow for data to be aggregated down to the year, quarter, month to view sales trends.
+         *  Created chart with product category, and region for axis; applied sales amount to compare which region had the highest total  sales ($). Provided slicer to filter data down to a single product to determine which region is selling the most of each product.
+         *  For Top Customer: applied customer names to y-axis for better visualization of names; added total sales amount next to each customer entry on the chart to show a better visualization of total dollars spent for each customer.
    
 4.  USEFUL TOOLS
    * ChatGPT - helpful tool to understanding processes & visualizing steps required.  Provides additional commands for troubleshooting
