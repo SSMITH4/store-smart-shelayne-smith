@@ -100,4 +100,11 @@
                * cursor = conn.cursor()
                * add DW_DIR.mkdir(parent=True, exist_ok=True) before with sqlite3.connect(DB_PATH) as conn:
  5. SCREENSHOTS
-   ![Alt text](data/dw/images/CUSTOMERDW.PNG)
+      ![Alt text](data/dw/images/CUSTOMERDW.PNG)
+      ![Alt text](data/dw/images/PRODUCTSDW-1.PNG)
+      ![Alt text](data/dw/images/SALESDW.PNG)
+   P.5 Screenshots
+      ![Alt text](data/dw/images/Top%20Customer.PNG)
+      ![Alt text](data/dw/images/Total%20Sales.PNG)
+      ![Alt text](data/dw/images/Slicer.PNG)
+      ![Alt text](data/dw/images/Product%20Sales%20by%20region.PNG)
