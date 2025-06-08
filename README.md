@@ -46,6 +46,8 @@
      * py scripts/data_preparation/prepare_sales_data.py
    * Module 4 script
      * python scripts/etl_to_dw.py (successful)
+   * Module 5 Command 
+     * ![Alt text](data/dw/images/selectanimage): This is the correct pathway to add actual images to README.md to have images display
    
 3.  NOTES
    *  All information is for Windows users only
