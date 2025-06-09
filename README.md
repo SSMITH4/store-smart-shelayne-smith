@@ -83,13 +83,47 @@
          *  Dicing: Similar to slicing, but on multiple dimensions, creates a subcube from the larger dataset.
             *  Creating a report that joins sales with customers and products tables (dimensions tables) which produces data showing the top performs.
          *  Drilldown: Moving from a summary view to more detailed data, while drill-up is the reverse.
-            *  Create drilldown by implementing year, quarter, and month.  This will allow for aggregated data to be drilled down or drillup.
+            *  Create drilldown by implementing year.  Our data is for one specific date, so we will not be able to drill down to a quarterly/monthly/weekly/daily basis.
       *  Dashboard Design
-         *  Implemented drilldown to allow for data to be aggregated down to the year, quarter, month to view sales trends.
+         *  Implemented drilldown to allow for data to be aggregated view sales trends.
          *  Created chart with product category, and region for axis; applied sales amount to compare which region had the highest total  sales ($). Provided slicer to filter data down to a single product to determine which region is selling the most of each product.
          *  For Top Customer: applied customer names to y-axis for better visualization of names; added total sales amount next to each customer entry on the chart to show a better visualization of total dollars spent for each customer.
-   
-4.  USEFUL TOOLS
+      *  P6. BI Insights & Storytelling
+            1. The Business Goal: Clearly state the exact question being addressed and why it matters
+               * What is the most profitable product by region for the last year?
+                 * Descriptive dimensions: Product, Region
+                 * Numeric metric: Total Sales
+                 * Aggregation: SUM
+                 * Slicing: By Product
+                 * Dicing: Product by region
+                 * Drill-down: total sales by product and region
+            2. Data Source:
+               * What information did you start with? Prepared Data
+               * Clearly indicate which coumsn of which tables were used.
+                 * Tables: Sales, Products, region
+                 * Columns: product_category, region, saleamount   
+                 * Workflow: 
+                   * Aggregate: Product Category
+                   * Calculate total sales for the year per region and product
+            3. Tell us what tools you used and why: Power BI, to provide data visualization and slicing, dicing, and drilldown/rollup.
+            4. Workflow & Logic
+               * Used Power BI to slice,dice, and drill down to determine total sales per product per region. 
+                 * Matrix table shows sales per product for each region and total sales. 
+                 * Create filter legends to drill down at a product and/or region level for data analysis.
+                 * Incorporated Stacked column chart to visualized total sales per product per region to determine which products on a percentage ratio accounted for the most sales in each region.   
+               * ![Alt text](data/dw/images/P6.%20Total%20Sales%20per%20product%20per%20region.PNG)
+            5.Results
+               *Low performing region- Central / High performing region- East 
+               *Low selling product- office (marginally) / High selling product- Home 
+            5. Suggested Business Action
+               * Determine what marketing strategies or specific electronic, home, office, and clothing items are the biggest sellers for the Eastern region, and implement those marketing strategies in other regions to increase total sales.  
+               * Evaluate inventory for office supplies to determine which products are underperforming and bring in inventory that is selling or alternative products to increase sales in office products.
+               * Create complimentary products between office/home and electronics.  To increase sales for complimentary products.
+               * Evaluate region specific clothing items that are relevant to the region to increase sales of clothing products.
+            6. Challenges
+               * Removing inconsistent duplicated data correctly.
+               * Using charts that add value to visualization and in a format that makes sense.  
+4.   USEFUL TOOLS
    * ChatGPT - helpful tool to understanding processes & visualizing steps required.  Provides additional commands for troubleshooting
       * P4. Create and Populate DW
          * Provide ChatGPT with error message, then provide entire code within etl_to_dw.py
@@ -101,7 +135,7 @@
                * with sqlite3.connect(DB_PATH) as conn:
                * cursor = conn.cursor()
                * add DW_DIR.mkdir(parent=True, exist_ok=True) before with sqlite3.connect(DB_PATH) as conn:
- 5. SCREENSHOTS
+5. SCREENSHOTS
       ![Alt text](data/dw/images/CUSTOMERDW.PNG)
       ![Alt text](data/dw/images/PRODUCTSDW-1.PNG)
       ![Alt text](data/dw/images/SALESDW.PNG)
