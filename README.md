@@ -113,14 +113,17 @@
                  * Incorporated Stacked column chart to visualized total sales per product per region to determine which products on a percentage ratio accounted for the most sales in each region.   
                * ![Alt text](data/dw/images/P6.%20Total%20Sales%20per%20product%20per%20region.PNG)
             5.Results
+
                *Low performing region- Central / High performing region- East 
                *Low selling product- office (marginally) / High selling product- Home 
-            5. Suggested Business Action
+
+            6. Suggested Business Action
                * Determine what marketing strategies or specific electronic, home, office, and clothing items are the biggest sellers for the Eastern region, and implement those marketing strategies in other regions to increase total sales.  
                * Evaluate inventory for office supplies to determine which products are underperforming and bring in inventory that is selling or alternative products to increase sales in office products.
                * Create complimentary products between office/home and electronics.  To increase sales for complimentary products.
                * Evaluate region specific clothing items that are relevant to the region to increase sales of clothing products.
-            6. Challenges
+             
+            7. Challenges
                * Removing inconsistent duplicated data correctly.
                * Using charts that add value to visualization and in a format that makes sense.  
 4.   USEFUL TOOLS
