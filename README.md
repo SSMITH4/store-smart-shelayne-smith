@@ -88,7 +88,7 @@
          *  Implemented drilldown to allow for data to be aggregated view sales trends.
          *  Created chart with product category, and region for axis; applied sales amount to compare which region had the highest total  sales ($). Provided slicer to filter data down to a single product to determine which region is selling the most of each product.
          *  For Top Customer: applied customer names to y-axis for better visualization of names; added total sales amount next to each customer entry on the chart to show a better visualization of total dollars spent for each customer.
-      *  P6. BI Insights & Storytelling
+   *  P6. BI Insights & Storytelling
             1. The Business Goal: Clearly state the exact question being addressed and why it matters
                * What is the most profitable product by region for the last year?
                  * Descriptive dimensions: Product, Region
