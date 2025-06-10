@@ -2,8 +2,8 @@
 Module 6: OLAP and Cubing Script
 File: scripts/olap_cubing.py
 
-This script handles OLAP cubing with Python. 
-It ingests data from a data warehouse, performs aggregations for multiple dimensions, 
+This script handles OLAP cubing with Python.
+It ingests data from a data warehouse, performs aggregations for multiple dimensions,
 and creates OLAP cubes. The cubes are saved as CSV files for further analysis.
 
 Purpose:
@@ -12,17 +12,17 @@ Purpose:
 - Useful for BI tools like Power BI, Snowflake, or Looker
 
 Input Tables (from SQLite DW):
-- Fact table (`sale`): sale_id, product_id, store_id, customer_id, sale_amount, sale_date
-- Dimension tables: 
+- Fact table (`sale`): sale_id (removed), product_id, store_id, customer_id, sale_amount, sale_date
+- Dimension tables:
     - `product` (product_id, category, ...)
     - `customer` (customer_id, region, ...)
 
 Output Cube:
 - Grouped by category, store_id, region
-- Includes sum and count of sale_amount, plus list of sale_ids
+- Includes sum and count of sale_amount
 
 Example output columns:
-category,store_id,region,sale_amount_sum,sale_amount_count,sale_ids
+category, store_id, region, sale_amount_sum, sale_amount_count
 """
 
 import pandas as pd
@@ -59,10 +59,8 @@ def create_olap_cube(sales_df: pd.DataFrame, dimensions: list, metrics: dict) ->
     try:
         grouped = sales_df.groupby(dimensions)
         cube = grouped.agg(metrics).reset_index()
-        cube["sale_ids"] = grouped["sale_id"].apply(list).reset_index(drop=True)
 
         columns = generate_column_names(dimensions, metrics)
-        columns.append("sale_ids")
         cube.columns = columns
 
         logger.info(f"OLAP cube created using dimensions: {dimensions}")
@@ -100,10 +98,9 @@ def main():
         conn = sqlite3.connect(DB_PATH)
         query = """
         SELECT 
-            s.sale_id,
             s.sale_amount,
-            s.store_id,
             p.category,
+            s.store_id,
             c.region
         FROM sale s
         LEFT JOIN product p ON s.product_id = p.product_id
