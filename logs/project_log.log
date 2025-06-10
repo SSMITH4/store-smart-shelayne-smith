@@ -1753,3 +1753,15 @@ dtype: int64
 2025-05-30 08:57:17.164 | INFO     | __main__:main:211 - ========================================
 2025-05-30 08:57:17.164 | INFO     | __main__:main:212 - Finished: create_dw_sqlite.py
 2025-05-30 08:57:17.164 | INFO     | __main__:main:213 - ========================================
+2025-06-10 12:36:47.720 | INFO     | __main__:main:96 - Starting OLAP Cubing process...
+2025-06-10 12:36:47.732 | INFO     | __main__:main:111 - Sales data with joins loaded.
+2025-06-10 12:36:47.740 | ERROR    | __main__:create_olap_cube:69 - Failed to create OLAP cube: can only concatenate str (not "float") to str
+2025-06-10 12:36:47.741 | ERROR    | __main__:main:123 - OLAP Cubing failed: can only concatenate str (not "float") to str
+2025-06-10 12:37:44.547 | INFO     | __main__:main:96 - Starting OLAP Cubing process...
+2025-06-10 12:37:44.551 | INFO     | __main__:main:111 - Sales data with joins loaded.
+2025-06-10 12:37:44.554 | ERROR    | __main__:create_olap_cube:69 - Failed to create OLAP cube: can only concatenate str (not "float") to str
+2025-06-10 12:37:44.555 | ERROR    | __main__:main:123 - OLAP Cubing failed: can only concatenate str (not "float") to str
+2025-06-10 12:43:42.901 | INFO     | __main__:main:86 - Starting OLAP Cubing process...
+2025-06-10 12:43:42.905 | INFO     | __main__:main:101 - Sales data with joins loaded.
+2025-06-10 12:43:42.907 | ERROR    | __main__:create_olap_cube:59 - Failed to create OLAP cube: can only concatenate str (not "float") to str
+2025-06-10 12:43:42.907 | ERROR    | __main__:main:113 - OLAP Cubing failed: can only concatenate str (not "float") to str
