@@ -1765,3 +1765,27 @@ dtype: int64
 2025-06-10 12:43:42.905 | INFO     | __main__:main:101 - Sales data with joins loaded.
 2025-06-10 12:43:42.907 | ERROR    | __main__:create_olap_cube:59 - Failed to create OLAP cube: can only concatenate str (not "float") to str
 2025-06-10 12:43:42.907 | ERROR    | __main__:main:113 - OLAP Cubing failed: can only concatenate str (not "float") to str
+2025-06-10 12:55:01.473 | INFO     | __main__:main:90 - Starting OLAP Cubing process...
+2025-06-10 12:55:01.476 | INFO     | __main__:main:105 - Sales data with joins loaded.
+2025-06-10 12:55:01.480 | ERROR    | __main__:create_olap_cube:63 - Failed to create OLAP cube: can only concatenate str (not "float") to str
+2025-06-10 12:55:01.480 | ERROR    | __main__:main:117 - OLAP Cubing failed: can only concatenate str (not "float") to str
+2025-06-10 12:56:43.633 | INFO     | __main__:main:48 - Starting OLAP Cubing process...
+2025-06-10 12:56:43.637 | INFO     | __main__:main:63 - Loaded 1494 rows of sales data.
+2025-06-10 12:56:43.639 | ERROR    | __main__:create_olap_cube:35 - Failed to create OLAP cube: can only concatenate str (not "float") to str
+2025-06-10 12:56:43.640 | ERROR    | __main__:main:75 - OLAP Cubing failed: can only concatenate str (not "float") to str
+2025-06-10 12:58:57.540 | INFO     | __main__:main:84 - Starting OLAP Cubing process...
+2025-06-10 12:58:57.544 | INFO     | __main__:main:99 - Sales data with joins loaded.
+2025-06-10 12:58:57.544 | INFO     | __main__:create_olap_cube:50 - Columns loaded from DB: ['sale_amount', 'category', 'store_id', 'region']
+2025-06-10 12:58:57.547 | ERROR    | __main__:create_olap_cube:68 - Failed to create OLAP cube: can only concatenate str (not "float") to str
+2025-06-10 12:58:57.547 | ERROR    | __main__:main:111 - OLAP Cubing failed: can only concatenate str (not "float") to str
+2025-06-10 13:01:44.352 | INFO     | __main__:main:84 - Starting OLAP Cubing process...
+2025-06-10 13:01:44.356 | INFO     | __main__:main:99 - Sales data with joins loaded.
+2025-06-10 13:01:44.357 | INFO     | __main__:create_olap_cube:50 - Columns loaded from DB: ['sale_amount', 'category', 'store_id', 'region']
+2025-06-10 13:01:44.360 | ERROR    | __main__:create_olap_cube:68 - Failed to create OLAP cube: can only concatenate str (not "float") to str
+2025-06-10 13:01:44.360 | ERROR    | __main__:main:111 - OLAP Cubing failed: can only concatenate str (not "float") to str
+2025-06-10 13:02:24.044 | INFO     | __main__:main:89 - Starting OLAP Cubing process...
+2025-06-10 13:02:24.047 | INFO     | __main__:main:107 - Sales data with joins loaded.
+2025-06-10 13:02:24.056 | INFO     | __main__:create_olap_cube:48 - Columns available: ['sale_amount', 'store_id', 'category', 'region']
+2025-06-10 13:02:24.066 | INFO     | __main__:create_olap_cube:69 - OLAP cube created with shape (143, 5)
+2025-06-10 13:02:24.086 | INFO     | __main__:write_cube_to_csv:82 - OLAP cube saved to: data\olap_cubing_outputs\multidimensional_olap_cube.csv
+2025-06-10 13:02:24.087 | INFO     | __main__:main:116 - OLAP cubing complete.
