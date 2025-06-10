@@ -12,23 +12,17 @@ Purpose:
 - Useful for BI tools like Power BI, Snowflake, or Looker
 
 Input Tables (from SQLite DW):
-- Fact table (`sale`): sale_id, product_id, store_id, customer_id, sale_amount_usd, sale_date
+- Fact table (`sale`): sale_id, product_id, store_id, customer_id, sale_amount, sale_date
 - Dimension tables: 
-    - `product` (product_id, product_name, ...)
-    - `store` (store_id, store_name, ...)
-    - `customer` (customer_id, region_name, ...)
+    - `product` (product_id, category, ...)
+    - `customer` (customer_id, region, ...)
 
 Output Cube:
-- Grouped by product_name, store_name, region_name
-- Includes sum of sale_amount_usd, count of sales, and list of sale_ids
+- Grouped by category, store_id, region
+- Includes sum and count of sale_amount, plus list of sale_ids
 
 Example output columns:
-product_name,store_name,region_name,sale_amount_usd_sum,sale_id_count,sale_ids
-
-After Creation:
-- Slice: Filter by product or store
-- Dice: View subcubes by multiple dimensions
-- Drill-down: Expand to finer dimensions (if available)
+category,store_id,region,sale_amount_sum,sale_amount_count,sale_ids
 """
 
 import pandas as pd
@@ -36,7 +30,7 @@ import sqlite3
 import pathlib
 import sys
 
-# Add project root to path
+# Add project root to path for local imports
 PROJECT_ROOT = pathlib.Path(__file__).resolve().parent.parent
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.append(str(PROJECT_ROOT))
@@ -48,19 +42,6 @@ DW_DIR = pathlib.Path("data") / "dw"
 DB_PATH = DW_DIR / "smart_sales.db"
 OLAP_OUTPUT_DIR = pathlib.Path("data") / "olap_cubing_outputs"
 OLAP_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-
-
-def ingest_sales_data_from_dw() -> pd.DataFrame:
-    """Load sales data from the SQLite data warehouse."""
-    try:
-        conn = sqlite3.connect(DB_PATH)
-        df = pd.read_sql_query("SELECT * FROM sale", conn)
-        conn.close()
-        logger.info("Sales data loaded successfully.")
-        return df
-    except Exception as e:
-        logger.error(f"Error loading sales data: {e}")
-        raise
 
 
 def create_olap_cube(sales_df: pd.DataFrame, dimensions: list, metrics: dict) -> pd.DataFrame:
@@ -114,29 +95,26 @@ def write_cube_to_csv(cube: pd.DataFrame, filename: str) -> None:
 
 
 def main():
-    """Main OLAP cubing process (by product, store, region)."""
     logger.info("Starting OLAP Cubing process...")
     try:
         conn = sqlite3.connect(DB_PATH)
         query = """
         SELECT 
             s.sale_id,
-            s.sale_amount_usd,
-            s.sale_date,
-            p.product_name,
-            st.store_name,
-            c.region_name
+            s.sale_amount,
+            s.store_id,
+            p.category,
+            c.region
         FROM sale s
         LEFT JOIN product p ON s.product_id = p.product_id
-        LEFT JOIN store st ON s.store_id = st.store_id
         LEFT JOIN customer c ON s.customer_id = c.customer_id
         """
         df = pd.read_sql_query(query, conn)
         conn.close()
         logger.info("Sales data with joins loaded.")
 
-        dimensions = ["product_name", "store_name", "region_name"]
-        metrics = {"sale_amount_usd": "sum", "sale_id": "count"}
+        dimensions = ["category", "store_id", "region"]
+        metrics = {"sale_amount": ["sum", "count"]}
 
         cube = create_olap_cube(df, dimensions, metrics)
         write_cube_to_csv(cube, "multidimensional_olap_cube.csv")
