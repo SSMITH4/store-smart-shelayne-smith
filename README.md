@@ -118,7 +118,7 @@
 
                *Low performing region- Central / High performing region- East 
                *Low selling product- office (marginally) / High selling product- Home 
-               
+               * REFERENCE and pull Power BI file.pbix to use interactive data in Power BI.  Located in the smart-store-shelayne-smith Repo.
 
             5. Suggested Business Action
                * Determine what marketing strategies or specific electronic, home, office, and clothing items are the biggest sellers for the Eastern region, and implement those marketing strategies in other regions to increase total sales.  
