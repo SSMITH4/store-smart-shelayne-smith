@@ -90,33 +90,35 @@
          *  Allow drilldown from region to store level for additional insight.
    *  P6. BI Insights & Storytelling
             1. The Business Goal: Clearly state the exact question being addressed and why it matters
-               * What is the most profitable product by region for the last year? Which store is the most profitable for the top performing region.
-                 * Descriptive dimensions: Product, Region
+               * What is the most profitable product by region for the last year? Which is the most profitable store in each region?
+                 * Descriptive dimensions: Product, Region, StoreID
                  * Numeric metric: Total Sales
                  * Aggregation: SUM
-                 * Slicing: By Product
+                 * Slicing: Total sales by product
                  * Dicing: Product by region
-                 * Drill-down: total sales by product by store
+                 * Drill-down: total sales by product by region by store
             2. Data Source:
                * What information did you start with? Prepared Data
-               * Clearly indicate which coumsn of which tables were used.
-                 * Tables: Sales, Products, region
-                 * Columns: product_category, region, saleamount, storeid  
+               * Clearly indicate which column of which tables were used.
+                 * Tables: Sales, Products, region, sales
+                 * Columns: product_category, region, sale_amount, store_id  
                  * Workflow: 
                    * Aggregate: Product Category
-                   * Calculate total sales for the year per region and product
+                   * Calculate total sales for the year per product by region
                    * Drilldown data to store id
-            3. Tell us what tools you used and why: Power BI, to provide data visualization and slicing, dicing, and drilldown/rollup.
+            3. Tell us what tools you used and why: OLAP cube script to generate CSV with required columns. Power BI, to provide data visualization and slicing, dicing, and drilldown/rollup.Images and Power BI file with tables and drilldown attached below
             4. Workflow & Logic
-               * Used Power BI to slice,dice, and drill down to determine total sales per product per region. 
-                 * Matrix table shows sales per product for each region and total sales. 
-                 * Create filter legends to drill down at a product and/or region level for data analysis.
+               *First, created and ran olap_cubing.py script to generate multidimensional_olap_cube.csv file with all required columns
+               * Used Power BI to slice,dice, and drill down to determine total sales per product per region per store. 
+                 * Matrix table shows sales per product for each region and total sales. Legends to allow filtering down to specific product and/or region for indepth analysis specific to product(s) and/or region(s)
+                 * Create drill down at a product and/or region level for data analysis for each store within a region.
                  * Incorporated Stacked column chart to visualized total sales per product per region to determine which products on a percentage ratio accounted for the most sales in each region.   
-               * ![Alt text](data/dw/images/P6.%20Total%20Sales%20per%20product%20per%20region.PNG)
+               * ![Alt text](data/dw/images/P6.%20Power%20BI%20image.PNG)
             5.Results
 
                *Low performing region- Central / High performing region- East 
                *Low selling product- office (marginally) / High selling product- Home 
+               
 
             5. Suggested Business Action
                * Determine what marketing strategies or specific electronic, home, office, and clothing items are the biggest sellers for the Eastern region, and implement those marketing strategies in other regions to increase total sales.  
@@ -126,7 +128,8 @@
              
             6. Challenges
                * Removing inconsistent duplicated data correctly.
-               * Using charts that add value to visualization and in a format that makes sense.  
+               * Getting the correct script format to successfully run olap_cube.py
+                 * Used ChatGPT to help clean up script to pull correct information and generate olaps outputs 
 4.   USEFUL TOOLS
    * ChatGPT - helpful tool to understanding processes & visualizing steps required.  Provides additional commands for troubleshooting
       * P4. Create and Populate DW
