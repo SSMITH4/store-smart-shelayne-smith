@@ -45,25 +45,15 @@ OLAP_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def create_olap_cube(sales_df: pd.DataFrame, dimensions: list, metrics: dict) -> pd.DataFrame:
-    """
-    Create OLAP cube by aggregating data on given dimensions.
-
-    Args:
-        sales_df (pd.DataFrame): Input sales data
-        dimensions (list): Grouping dimensions
-        metrics (dict): Aggregation functions
-
-    Returns:
-        pd.DataFrame: Aggregated OLAP cube
-    """
     try:
         grouped = sales_df.groupby(dimensions)
         cube = grouped.agg(metrics).reset_index()
 
-        columns = generate_column_names(dimensions, metrics)
-        cube.columns = columns
+        # Flatten MultiIndex columns
+        if isinstance(cube.columns, pd.MultiIndex):
+            cube.columns = ['_'.join(filter(None, col)).rstrip('_') for col in cube.columns.values]
 
-        logger.info(f"OLAP cube created using dimensions: {dimensions}")
+        logger.info(f"OLAP cube created with columns: {cube.columns.tolist()}")
         return cube
     except Exception as e:
         logger.error(f"Failed to create OLAP cube: {e}")
