@@ -87,24 +87,25 @@
       *  Dashboard Design
          *  Implemented drilldown to allow for data to be aggregated view sales trends.
          *  Created chart with product category, and region for axis; applied sales amount to compare which region had the highest total  sales ($). Provided slicer to filter data down to a single product to determine which region is selling the most of each product.
-         *  For Top Customer: applied customer names to y-axis for better visualization of names; added total sales amount next to each customer entry on the chart to show a better visualization of total dollars spent for each customer.
+         *  Allow drilldown from region to store level for additional insight.
    *  P6. BI Insights & Storytelling
             1. The Business Goal: Clearly state the exact question being addressed and why it matters
-               * What is the most profitable product by region for the last year?
+               * What is the most profitable product by region for the last year? Which store is the most profitable for the top performing region.
                  * Descriptive dimensions: Product, Region
                  * Numeric metric: Total Sales
                  * Aggregation: SUM
                  * Slicing: By Product
                  * Dicing: Product by region
-                 * Drill-down: total sales by product and region
+                 * Drill-down: total sales by product by store
             2. Data Source:
                * What information did you start with? Prepared Data
                * Clearly indicate which coumsn of which tables were used.
                  * Tables: Sales, Products, region
-                 * Columns: product_category, region, saleamount   
+                 * Columns: product_category, region, saleamount, storeid  
                  * Workflow: 
                    * Aggregate: Product Category
                    * Calculate total sales for the year per region and product
+                   * Drilldown data to store id
             3. Tell us what tools you used and why: Power BI, to provide data visualization and slicing, dicing, and drilldown/rollup.
             4. Workflow & Logic
                * Used Power BI to slice,dice, and drill down to determine total sales per product per region. 
@@ -117,13 +118,13 @@
                *Low performing region- Central / High performing region- East 
                *Low selling product- office (marginally) / High selling product- Home 
 
-            6. Suggested Business Action
+            5. Suggested Business Action
                * Determine what marketing strategies or specific electronic, home, office, and clothing items are the biggest sellers for the Eastern region, and implement those marketing strategies in other regions to increase total sales.  
                * Evaluate inventory for office supplies to determine which products are underperforming and bring in inventory that is selling or alternative products to increase sales in office products.
                * Create complimentary products between office/home and electronics.  To increase sales for complimentary products.
                * Evaluate region specific clothing items that are relevant to the region to increase sales of clothing products.
              
-            7. Challenges
+            6. Challenges
                * Removing inconsistent duplicated data correctly.
                * Using charts that add value to visualization and in a format that makes sense.  
 4.   USEFUL TOOLS
