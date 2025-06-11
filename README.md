@@ -1,29 +1,114 @@
 # store-smart-shelayne-smith
-P1. BI Python (Machine Set-up, Initialize Project, and Organize Collaborate)
-   1. Install Python, GitHub, and Visual Studio Code
-      *Configure GitHub
-      *Install extension in VS Code
-      *Create Project Folder (Repo)
-         *GitHub
-         *Locally on C:Drive
-   2. Create Repo: smart-store-shelayne-smith
-      *Open repo in VS Code
-      *Change pathway from Repo folder to smart-store-shelayne-smith
-         *File > Open Folder > Navigate to smart-store-shelayne-smith within File Explorer and select
-         * You can use cd and file name to sync in terminal for correct folder
-   3.  Create a virtual environment
-         *Run .venv/scripts/activate
-         *Make sure a .venv folder exists with correct files
-            *.venv- vitural environment in Python; self-containing environment that includes its own Python interpreter, pip, and libraries.  Helps manage dependencies per project, so they don't interfere with other projects or system-wide Python.
-   4. Folder Structure Configurtion
-      ![Alt text](data/dw/images/Folder%20Structure.PNG)
-   5. Create data folder: data/raw:
-         *Add sample data:
-            *customers_data.csv
-            *products_data.csv
-            *sales_data.csv
-   
+# Smart Store BI Project – Shelayne Smith
 
+This Business Intelligence (BI) project showcases the full pipeline from environment setup, data preparation, OLAP cube generation, to visualization using Power BI. The goal is to identify top-performing products and stores by region and generate actionable insights.
+
+---
+
+## 📁 Project Repository
+
+**Repo Name:** `smart-store-shelayne-smith`
+
+---
+
+## 🔧 P1. BI Python Setup & Project Initialization
+
+### 1. Environment & Tooling Setup
+
+- **Install**:
+  - Python
+  - GitHub CLI/Desktop
+  - Visual Studio Code (VS Code)
+
+- **Configure GitHub**:
+  - Create new repo on GitHub: `smart-store-shelayne-smith`
+  - Clone repo locally
+
+- **VS Code Extensions**:
+  - Python
+  - GitLens
+  - Jupyter
+  - SQLite Viewer
+
+### 2. Folder Setup
+
+- Create project folder locally on `C:` and sync with GitHub
+- Navigate to repo via: file > Open Folder > Navigate to smart-store-shelayne-smith
+
+### 3. Virtual Environment
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+   -A .venv folder contains a self-contained Python environment with its own pip, interpreter, and dependencies.
+
+Project Structure
+smart-store-shelayne-smith/
+│
+├── data/
+│   ├── raw/
+│   │   ├── customer_data.csv
+│   │   ├── products_data.csv
+│   │   └── sales_data.csv
+│   ├── prepared/
+│   │   ├── customers_prepared.csv
+│   │   ├── products_prepared.csv
+│   │   └── sales_prepared.csv
+│   ├── dw/
+│   │   └── smart_sales.db
+│   ├── logs/
+│   │   └── project_log.log
+│   └── olap_cubing_outputs/
+│       └── multidimensional_olap_cube.csv
+│
+├── scripts/
+│   ├── data_prep.py
+│   ├── data_scrubber.py
+│   ├── etl_to_dw.py
+│   ├── olap_cubing.py
+│   └── data_preparation/
+│       ├── prepare_customers_data.py
+│       ├── prepare_products_data.py
+│       └── prepare_sales_data.py
+│
+├── tests/
+│   └── test_data_scrubber.py
+│
+├── utils/
+│   └── logger.py
+│
+├── .gitignore
+├── requirements.txt
+└── README.md
+P2. Data Preparation and Exploration
+   Logger Setup
+   utils/logger.py: handles logging
+
+   Log file output: data/logs/project_log.log
+
+   Execute Scripts
+   py scripts/data_prep.py
+
+   Version Control
+   git add .
+   git commit -m "Add data preparation script"
+   git push origin main
+P3. Prepare data for ETL
+   Data Cleaning & Tests
+      scripts/data_scrubber.py
+      Test via:
+         python -m tests.test_data_scrubber
+               Fix: Add project root to sys.path in test files or run tests from root using -m flag.
+   Data Preparation Scripts
+      py scripts/data_preparation/prepare_customers_data.py
+      py scripts/data_preparation/prepare_products_data.py
+      py scripts/data_preparation/prepare_sales_data.py
+P4. Create & Populate DW
+   ETL Script
+      File: scripts/etl_to_dw.py
+
+      Output: data/dw/smart_sales.db
+      python scripts/etl_to_dw.py
       ![Alt text](data/dw/images/CUSTOMERDW.PNG)
       ![Alt text](data/dw/images/PRODUCTSDW-1.PNG)
       ![Alt text](data/dw/images/SALESDW.PNG)
