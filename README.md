@@ -272,7 +272,7 @@ python scripts/etl_to_dw.py
 ## 📊 SQL Queries and Reporting Logic
 
 ### 🔍 Sales Filtering (Slicing)
-- Sales data is **filtered to include only transactions from 2023 onward**.
+- Sales data is **filtered to include only transactions from 2025 onward**.
 - This ensures the analysis focuses on **recent sales trends** and avoids outdated insights.
 
 ### 🧮 Sales Grouping (Dicing)
@@ -313,7 +313,7 @@ python scripts/etl_to_dw.py
   - **Legend placement and labeling** for readability
 
 ### 🆕 Focus on Recent Data
-- All visualizations are **filtered to show data from 2023 onward**.
+- All visualizations are **filtered to show data from 2025 onward**.
 - Keeps the dashboard **timely, actionable, and relevant** to current performance.
 
 Images:
