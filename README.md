@@ -1,66 +1,29 @@
 # store-smart-shelayne-smith
 P1. BI Python (Machine Set-up, Initialize Project, and Organize Collaborate)
-   1.	Install Python, GitHub, and Visual Studio Code	
-a.	Configure GitHub
-b.	Install extensions in VS Code
-c.	Create Project Folder (Repo) 
-i.	GitHub
-ii.	Locally on C: drive
-   2.	Create Repo: smart-store-shelayne-smith
-      a.	Open repo in VS Code 
-      b.	Change pathway from Repo folder to store-smart-shelayne-smith
-         i.	File > Open Folder > Navigate to store-smart-shelayne-smith within File Explorer and select.
-         ii.	You can use cd and file name to sync in terminal for correct folder pathway
-   3.	Create a virtual environment
-      a.	Run .venv/scripts/activate
-      b.	Make sure a .venv folder exists 
-         *.venv- virtual environment in Python: self-containing environment that includes its own Python interpreter, pip, and libraries.  Helps manage dependencies per project, so they don’t interfere with other projects or system-wide Python.
-   4.	Folder Structure configuration 
-   5.	smart-store-yourname/   
-      │
-      ├── data/                
-      │   ├── raw/                          
-      │
-      ├── scripts/                            
-      │
-      ├── utils/                     
-      │   └── logger.py             
-      │
-      ├── .gitignore                 
-      ├── README.md                  
-      └── requirements.txt  
-   6.	Create data folder: data/raw:
-      a.	Add sample data
-         i.	Customer_data.csv
-         ii.	Products_data.csv
-         iii.	Sales_data.csv
-P.2 BI Tools Setup, Data Exploration, & Mining
-   1.	Create utils/logger.py and apply script
-      a.	This script provides logging functions for a project.  Essential way to track events and issues during execution.
-   2.	Create logs Folder:
-      a.	data/logs/project_log.log and apply script
-   3.	Create scripts/data_prep.py and apply script
-   4.	Execute Python Script
-      a.	py scripts/data_prep.py
-   5.	Git-add-commit-push to GitHub
-P.3 Prepare Data for ETL
-   1.	Create file: scripts/data_scrubber.py and apply script to file
-   2.	Create file: tests/test_data_scrubber.py and apply script to file
-      a.	Run test script: py tests/test_data_scrubber.py
-   3.	Create file scripts/data_preparation
-      a.	Files
-         i.	Scripts/data_preparation/prepare_customers_data.py
-         ii.	Scripts/data_preparation\prepare_products_data.py
-         iii.	Scripts/data_preparation\prepare_sales_data.py
-   4.	Create data/prepared folders:
-      a.	Customer_prepared.csv
-      b.	Products_prepared.csv
-      c.	Sales_prepared.csv
-P4. Create and Populate DW
-   1.	Create new file names etl_to_dw.py and apply script (change to fit your data setup)
-   2.	Create folder data/dw
-a.	This is where your smart_sales.db will need to be stored 
-   3.	Run script to populate data set
+   1. Install Python, GitHub, and Visual Studio Code
+      *Configure GitHub
+      *Install extension in VS Code
+      *Create Project Folder (Repo)
+         *GitHub
+         *Locally on C:Drive
+   2. Create Repo: smart-store-shelayne-smith
+      *Open repo in VS Code
+      *Change pathway from Repo folder to smart-store-shelayne-smith
+         *File > Open Folder > Navigate to smart-store-shelayne-smith within File Explorer and select
+         * You can use cd and file name to sync in terminal for correct folder
+   3.  Create a virtual environment
+         *Run .venv/scripts/activate
+         *Make sure a .venv folder exists with correct files
+            *.venv- vitural environment in Python; self-containing environment that includes its own Python interpreter, pip, and libraries.  Helps manage dependencies per project, so they don't interfere with other projects or system-wide Python.
+   4. Folder Structure Configurtion
+      ![Alt text](data/dw/images/Folder%20Structure.PNG)
+   5. Create data folder: data/raw:
+         *Add sample data:
+            *customers_data.csv
+            *products_data.csv
+            *sales_data.csv
+   
+
       ![Alt text](data/dw/images/CUSTOMERDW.PNG)
       ![Alt text](data/dw/images/PRODUCTSDW-1.PNG)
       ![Alt text](data/dw/images/SALESDW.PNG)
