@@ -148,7 +148,9 @@ py scripts/data_preparation/prepare_sales_data.py
 ```bash
 python scripts/etl_to_dw.py
 ```
-
+* ![](data/dw/images/CUSTOMERDW.PNG)
+* ![](data/dw/images/PRODUCTSDW-1.PNG)
+* ![](data/dw/images/SALESDW.PNG)
 ---
 
 ## 🔧 P5. Power BI + OLAP Visualization
@@ -168,10 +170,6 @@ python scripts/etl_to_dw.py
 7. Dashboard design with filters, bar charts, and matrix tables
 
 Images:
-
-* ![](data/dw/images/CUSTOMERDW.PNG)
-* ![](data/dw/images/PRODUCTSDW-1.PNG)
-* ![](data/dw/images/SALESDW.PNG)
 * ![](data/dw/images/Top%20Customer.PNG)
 * ![](data/dw/images/Total%20Sales.PNG)
 * ![](data/dw/images/Slicer.PNG)
