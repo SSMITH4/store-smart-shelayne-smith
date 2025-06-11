@@ -382,7 +382,7 @@ Images:
 ## 🧭 Section 1: The Business Goal
 
 **Business Question:**  
-What product is the most profitable per region, with an additional breakdown by store within each region?
+What product is the most profitable per region, with an additional breakdown by store within each region? What is frequency of of sales?
 
 This analysis aims to help business stakeholders identify the most successful product-region-store combinations to optimize inventory, marketing, and sales strategies.
 
@@ -400,8 +400,9 @@ This analysis aims to help business stakeholders identify the most successful pr
 **Relevant Columns:**
 - `product_category`
 - `region`
-- `sale_amount`
+- `sale_amount_sum`
 - `store_id`
+- `sale_amount_count`
 
 ---
 
@@ -421,7 +422,7 @@ This analysis aims to help business stakeholders identify the most successful pr
   - `store_id` (multi-level within region)
 
 **Numeric Metric (Quantitative):**
-- **Values**: `sale_amount` (used to assess profitability)
+- **Values**: `sale_amount` (used to assess profitability) `sale_amount_count` (used to assess transaction totals)
 
 ---
 
@@ -429,10 +430,10 @@ This analysis aims to help business stakeholders identify the most successful pr
 
 **Effective Visualizations:**
 - **Pivot Table**: 
-  - Displays profitability across products by region and store in one view
+  - Displays profitability, and number of transactions across products by region and store in one view
   - Highlights top-performing combinations instantly
 - **Stacked Bar Chart**:
-  - Allows for **drilldown** analysis from region to store level
+  - Allows for **drilldown** analysis from region to store level & **drilldown** analysis of sales to total transactions
   - Useful for visual storytelling and performance comparison
 
 ---
