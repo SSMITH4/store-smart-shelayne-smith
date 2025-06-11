@@ -377,6 +377,92 @@ Images:
 * Troubleshooting `olap_cubing.py`
 
 ---
+# 📊 P7. Custom BI Project – Profitability by Product, Region, and Store
+
+## 🧭 Section 1: The Business Goal
+
+**Business Question:**  
+What product is the most profitable per region, with an additional breakdown by store within each region?
+
+This analysis aims to help business stakeholders identify the most successful product-region-store combinations to optimize inventory, marketing, and sales strategies.
+
+---
+
+## 🗂️ Section 2: Data Source
+
+**Data Type:** Prepared Data (Cleaned and normalized)
+
+**Tables Used:**
+- `sales`
+- `customers`
+- `products`
+
+**Relevant Columns:**
+- `product_category`
+- `region`
+- `sale_amount`
+- `store_id`
+
+---
+
+## 🛠️ Section 3: Tools Used
+
+- **VS Code**: Python script `olap_cubing.py` used to generate `multidimensional_olap_cube.csv`
+- **Power BI**: Used for building interactive dashboards and visualizing insights
+
+---
+
+## 🔁 Section 4: Workflow & Logic
+
+**Descriptive Dimensions (Categorical):**
+- **Rows**: `product_category`
+- **Columns**: 
+  - `region`
+  - `store_id` (multi-level within region)
+
+**Numeric Metric (Quantitative):**
+- **Values**: `sale_amount` (used to assess profitability)
+
+---
+
+## 📈 Section 5: Results – Narrative & Visualization
+
+**Effective Visualizations:**
+- **Pivot Table**: 
+  - Displays profitability across products by region and store in one view
+  - Highlights top-performing combinations instantly
+- **Stacked Bar Chart**:
+  - Allows for **drilldown** analysis from region to store level
+  - Useful for visual storytelling and performance comparison
+
+---
+
+## 💡 Section 6: Suggested Business Actions
+
+- Prioritize stocking and marketing high-performing products per region
+- Reallocate resources to stores with higher sales impact
+- Run targeted campaigns in regions with underperforming product categories
+
+---
+
+## ⚠️ Section 7: Challenges
+
+- Inconsistent or missing store-level data in some regions
+- Small sample sizes for some product categories
+- Need for real-time data updates to keep dashboards current
+
+---
+
+## 🧪 Section 8: Ethical Considerations
+
+- **Data Responsibility**: Ensure data collection complies with privacy regulations
+- **Bias Awareness**: Avoid drawing conclusions that reinforce geographic or demographic biases
+- **Data Integrity**: Be cautious of decisions based on incomplete or out-of-context data
+- **Responsible Insight Usage**: Use insights to improve customer experience and operational fairness — not solely profit
+
+---
+
+> _This BI project helps bridge data insights with smart business decisions, ensuring transparency, fairness, and value-driven outcomes._
 
 ## 📂 Commands & Tips
 
