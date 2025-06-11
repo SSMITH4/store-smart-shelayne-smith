@@ -456,9 +456,13 @@ This analysis aims to help business stakeholders identify the most successful pr
 ## 🧪 Section 8: Ethical Considerations
 
 - **Data Responsibility**: Ensure data collection complies with privacy regulations
+  - Is the data being used responsibly?
 - **Bias Awareness**: Avoid drawing conclusions that reinforce geographic or demographic biases
+  - Could the analysis reinforce biases?
 - **Data Integrity**: Be cautious of decisions based on incomplete or out-of-context data
+  - Are you making decisions based on incomplete or unverified data?
 - **Responsible Insight Usage**: Use insights to improve customer experience and operational fairness — not solely profit
+  - How can the business use the insights responsibly?
 
 ---
 
