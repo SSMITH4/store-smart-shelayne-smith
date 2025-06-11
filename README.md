@@ -382,7 +382,7 @@ Images:
 ## 🧭 Section 1: The Business Goal
 
 **Business Question:**  
-What product is the most profitable per region, with an additional breakdown by store within each region? What is frequency of of sales?
+What product is the most profitable per region, with an additional breakdown by store within each region? What is total transactions for each product?
 
 This analysis aims to help business stakeholders identify the most successful product-region-store combinations to optimize inventory, marketing, and sales strategies.
 
