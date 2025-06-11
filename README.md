@@ -80,6 +80,7 @@ smart-store-shelayne-smith/
 ├── .gitignore
 ├── requirements.txt
 └── README.md
+
 ## 🔧  Data Preparation and Exploration
    Logger Setup
    utils/logger.py: handles logging
