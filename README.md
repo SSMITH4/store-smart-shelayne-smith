@@ -269,6 +269,53 @@ python scripts/etl_to_dw.py
 6. Create Slicer, Drilldown, and Dicing visualizations
 7. Dashboard design with filters, bar charts, and matrix tables
 
+## 📊 SQL Queries and Reporting Logic
+
+### 🔍 Sales Filtering (Slicing)
+- Sales data is **filtered to include only transactions from 2023 onward**.
+- This ensures the analysis focuses on **recent sales trends** and avoids outdated insights.
+
+### 🧮 Sales Grouping (Dicing)
+- Sales records are **joined with `customers` and `products`** tables.
+- Aggregations are performed on:
+  - **Product Category**
+  - **Customer Region**
+- This **dicing operation** helps highlight **top-performing product segments** across different geographic areas.
+
+### ⏱️ Time-Based Aggregation (Drilldown)
+- Sale dates are **cleaned and parsed** using `try_to_date()` or equivalent logic.
+- Sales amounts are aggregated by:
+  - **Year**
+  - **Quarter**
+  - **Month**
+- Enables **hierarchical drilldown** in time-series charts for in-depth trend analysis.
+
+---
+
+## 📈 Dashboard Design Choices
+
+### 🗓️ Hierarchical Time Analysis
+- The dashboard includes **interactive drilldown charts**:
+  - Start at yearly trends
+  - Expand to quarters and months
+- Allows stakeholders to **explore patterns across different time granularities**.
+
+### 🌍 Customer & Product Segmentation
+- Sales are grouped by:
+  - **Product Category**
+  - **Customer Region**
+- This provides insights into **key market segments** and **regional performance**.
+
+### 🧼 Clean, Readable Visuals
+- Applied best practices in chart design:
+  - **Rotated x-axis labels** for clarity
+  - **Consistent color schemes** for comparisons
+  - **Legend placement and labeling** for readability
+
+### 🆕 Focus on Recent Data
+- All visualizations are **filtered to show data from 2023 onward**.
+- Keeps the dashboard **timely, actionable, and relevant** to current performance.
+
 Images:
 * ![](data/dw/images/Top%20Customer.PNG)
 * ![](data/dw/images/Total%20Sales.PNG)
