@@ -135,6 +135,109 @@ py scripts/data_preparation/prepare_sales_data.py
 ---
 
 ## 🔧 P4. Create & Populate DW
+## 🧠 Design Choices
+
+### 📦 SQLite as the Data Warehouse
+SQLite was selected due to its:
+
+- **Simplicity** – Easy to set up and manage with no server requirements  
+- **Portability** – Self-contained database that can be easily shared  
+- **Lightweight Infrastructure** – Ideal for small-to-medium scale analytical projects  
+
+This makes SQLite a fitting choice for a local, fast-prototyping BI environment.
+
+---
+
+### 🧱 Schema Normalization
+The data warehouse schema is **normalized** into separate tables for:
+
+- `customers`
+- `products`
+- `sales`
+
+This structure:
+
+- Reduces data redundancy  
+- Improves maintainability and query performance  
+- Supports flexible, multi-dimensional analysis
+
+---
+
+### 🧾 Column Naming Conventions
+All table and column names follow the **`lowercase_snake_case`** style. This ensures:
+
+- Consistency across the database and codebase  
+- Compatibility with SQL syntax standards  
+- Improved readability for developers and analysts
+
+---
+
+### 📅 Date Storage Format
+Since SQLite lacks a native `DATE` type, all date values are stored as `TEXT` in **ISO 8601 format** (`YYYY-MM-DD`). This:
+
+- Preserves chronological sort order  
+- Ensures compatibility with SQL and Python date parsers  
+- Facilitates filtering and time-based analytics
+
+---
+
+### 🧹 Data Preparation Workflow
+Before ingestion into the warehouse:
+
+- **Raw CSV files** are cleaned and validated  
+- Column headers are renamed to match the database schema  
+- **Duplicate rows** are removed to maintain integrity  
+- Data types are cast appropriately to match schema expectations  
+
+This preprocessing step ensures high data quality and consistency across all pipeline stages.
+
+## 🗂️ Schema Implementation
+
+The data warehouse schema follows a star design, with a central `sales` fact table and supporting dimension tables: `customers` and `products`.
+
+---
+
+### 🧍 Customers Table
+
+| Column             | Type     | Description                        |
+|--------------------|----------|------------------------------------|
+| `customer_id`      | INTEGER  | Primary key                        |
+| `name`             | TEXT     | Customer full name                 |
+| `region`           | TEXT     | Geographic region                  |
+| `join_date`        | TEXT     | Join date in ISO format (`YYYY-MM-DD`) |
+| `loyalty_points`   | INTEGER  | Loyalty points accumulated         |
+| `customer_segment` | TEXT     | Customer segment or category       |
+
+---
+
+### 📦 Products Table
+
+| Column           | Type     | Description                 |
+|------------------|----------|-----------------------------|
+| `product_id`     | INTEGER  | Primary key                 |
+| `product_name`   | TEXT     | Name of the product         |
+| `category`       | TEXT     | Product category            |
+| `price`          | REAL     | Price per unit              |
+| `stock_quantity` | INTEGER  | Current stock quantity      |
+
+---
+
+### 💰 Sales Table
+
+| Column         | Type     | Description                                 |
+|----------------|----------|---------------------------------------------|
+| `sale_id`      | INTEGER  | Primary key                                 |
+| `sale_date`    | TEXT     | Date of sale (ISO format `YYYY-MM-DD`)      |
+| `customer_id`  | INTEGER  | Foreign key referencing `customers`         |
+| `product_id`   | INTEGER  | Foreign key referencing `products`          |
+| `store_id`     | INTEGER  | Identifier for the store                    |
+| `campaign_id`  | INTEGER  | Identifier for the marketing campaign       |
+| `quantity`     | INTEGER  | Quantity sold                               |
+| `total_amount` | REAL     | Total sale amount after discounts           |
+
+---
+
+All foreign key relationships are enforced to maintain referential integrity. Data types are selected based on usage context and SQLite's supported types.
 
 ### ETL Script
 
@@ -189,12 +292,15 @@ Images:
 
 ### 2. Data Source
 
+* Prepared data csv dataset populated in olap_cubing_outputs/multidimensional_olap_cube.csv
 * Tables: Sales, Product, Customers
 * Columns: product\_category, region, sale\_amount, store\_id
 
 ### 3. Tools Used
 
+* SQLite- data warehouse storage
 * `olap_cubing.py` for generating `multidimensional_olap_cube.csv`
+* Pandas- data manipulation and validation
 * Power BI for visualization
 
 ### 4. Workflow & Logic
