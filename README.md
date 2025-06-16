@@ -435,7 +435,7 @@ This analysis aims to help business stakeholders identify the most successful pr
 - **Stacked Bar Chart**:
   - Allows for **drilldown** analysis from region to store level & **drilldown** analysis of sales to total transactions
   - Useful for visual storytelling and performance comparison
-
+ * ![] (data/images/FINAL VISULATION.PNG) 
 ---
 
 ## 💡 Section 6: Suggested Business Actions
