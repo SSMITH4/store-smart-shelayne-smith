@@ -362,7 +362,8 @@ Images:
 * Low Sales: Central Region, Office Product
 * Use interactive Power BI `.pbix` file in repo
 
-* ![](data/dw/images/P6.%20Power%20BI%20image.PNG)
+![Power BI Dashboard](data/dw/images/P6.%20Power%20BI%20image.PNG)
+
 
 ### 6. Suggested Business Actions
 
