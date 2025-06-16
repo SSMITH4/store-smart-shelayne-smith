@@ -362,7 +362,7 @@ Images:
 * Low Sales: Central Region, Office Product
 * Use interactive Power BI `.pbix` file in repo
 
-* ![Final Visualization](data/dw/images/FINAL%20VISUALIZATION.PNG "Final Power BI Dashboard")
+* ![](data/dw/images/P6.%20Power%20BI%20image.PNG)
 
 
 
@@ -438,7 +438,7 @@ This analysis aims to help business stakeholders identify the most successful pr
 - **Stacked Bar Chart**:
   - Allows for **drilldown** analysis from region to store level & **drilldown** analysis of sales to total transactions
   - Useful for visual storytelling and performance comparison
- * ![] (data/images/FINAL VISULATION.PNG) 
+* ![Final Visualization](data/dw/images/FINAL%20VISUALIZATION.PNG "Final Power BI Dashboard")
 ---
 
 ## 💡 Section 6: Suggested Business Actions
