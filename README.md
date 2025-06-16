@@ -362,7 +362,7 @@ Images:
 * Low Sales: Central Region, Office Product
 * Use interactive Power BI `.pbix` file in repo
 
-* ![Product Sales by Region](data/dw/images/FINAL%20VISUALIZATION.PNG)
+* ![](data/dw/images/FINAL%20VISUALIZATION.PNG)
 
 
 
